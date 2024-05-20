@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 // Import Assets //
-import logo from "../../../assets/images/dummy-logo.svg";
+import logo from "../../../assets/images/img-logo.webp";
 
 type NavItem = {
 	label: string;
@@ -53,7 +53,7 @@ function Navbar() {
 			{/* <-- ==== Navbar Mobile End ==== --> */}
 
 			{/* <-- ==== Navbar Desktop Start ==== --> */}
-			<nav className="hidden fixed lg:flex w-full z-50 px-sectionpxlg 2xl:px-sectionpx2xl justify-between items-center py-6 bg-black bg-opacity-45 backdrop-blur">
+			<nav className="hidden fixed lg:flex w-full z-50 px-sectionpxlg 2xl:px-sectionpx2xl justify-between items-center py-5 bg-black bg-opacity-45 backdrop-blur">
 				{/* <-- === Logo Start === --> */}
 				<Link href="/">
 					<Image
@@ -61,6 +61,7 @@ function Navbar() {
 						alt="Wijaya Putra Santoso"
 						title="Wijaya Putra Santoso"
 						priority={true}
+						className="h-16 w-auto"
 					/>
 				</Link>
 				{/* <-- === Logo End === --> */}

@@ -11,9 +11,9 @@ import {
 	CarouselNext,
 	type CarouselApi,
 } from "./ui/carousel";
-import dummycarouselitem1 from "../../../assets/images/dummy-carousel-item-1.png";
-import dummycarouselitem2 from "../../../assets/images/dummy-carousel-item-2.png";
-import dummycarouselitem3 from "../../../assets/images/dummy-carousel-item-3.png";
+import herocarousel1 from "../../../assets/images/hero/img-hero-1.webp";
+import herocarousel2 from "../../../assets/images/hero/img-hero-2.webp";
+import herocarousel3 from "../../../assets/images/hero/img-hero-3.webp";
 
 interface HeroCarouselProps {
 	bgColorClass?: string;
@@ -73,7 +73,7 @@ export default function HeroCarousel({
 				}}
 				plugins={[
 					Autoplay({
-						delay: 5000,
+						delay: 7000,
 					}),
 				]}
 				setApi={setApi}
@@ -89,13 +89,13 @@ export default function HeroCarousel({
 							playsInline
 							className="w-full h-screen bg-cover object-cover"
 						>
-							<source src="./hero.mp4" type="video/mp4" />
+							<source src="./vid-hero.mp4" type="video/mp4" />
 						</video>
 					</CarouselItem>
 
 					<CarouselItem className="w-full bg-cover object-cover">
 						<Image
-							src={dummycarouselitem1}
+							src={herocarousel1}
 							alt="Galeri 1"
 							priority={true}
 							className="w-full h-screen object-cover"
@@ -104,7 +104,7 @@ export default function HeroCarousel({
 
 					<CarouselItem className="w-full bg-cover object-cover">
 						<Image
-							src={dummycarouselitem2}
+							src={herocarousel2}
 							alt="Galeri 2"
 							priority={true}
 							className="w-full h-screen object-cover"
@@ -113,7 +113,7 @@ export default function HeroCarousel({
 
 					<CarouselItem className="w-full bg-cover object-cover">
 						<Image
-							src={dummycarouselitem3}
+							src={herocarousel3}
 							alt="Galeri 3"
 							priority={true}
 							className="w-full h-screen object-cover"

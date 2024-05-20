@@ -1,4 +1,3 @@
-import { FileAsset } from "sanity";
 import { getFileAsset } from "@sanity/asset-utils";
 
 import { dataset, projectId } from "../env";

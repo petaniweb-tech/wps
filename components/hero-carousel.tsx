@@ -26,7 +26,6 @@ interface HeroCarouselProps {
 export default function HeroCarousel({
 	banners,
 }: HeroCarouselProps) {
-	console.log('banners: ', JSON.stringify(banners))
 	const [api, setApi] = React.useState<CarouselApi>();
 	const [current, setCurrent] = React.useState(0);
 	const [count, setCount] = React.useState(0);

@@ -28,5 +28,14 @@
 		"visionDescription": "Become a partner who can be trusted and adhere to <span class='italic font-medium'>&quot;Safety Number One&quot;</span>, punctuality, and professional team coordination.",
 		"mission": "MISSION",
 		"missionDescription": "We periodically want to become a logistics company that has a large fleet. Encourage profitable and sustainable company growth, while still paying attention to social responsibility."
+	},
+
+	"HubungikamiPage": {
+		"formName": "CONTACT US",
+		"namePlaceholder": "Name",
+		"emailPlaceholder": "Email",
+		"phonePlaceholder": "Phone Number",
+		"messagePlaceholder": "Your message",
+		"submit": "Send message"
 	}
 }

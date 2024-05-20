@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "../../../lib/navigation";
 
 // Import Icons //
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 // Import Assets //
 import logo from "../../../assets/images/img-logo.webp";
+import { useTranslations } from "next-intl";
 
 type NavItem = {
 	label: string;
@@ -13,40 +14,42 @@ type NavItem = {
 	children?: NavItem[];
 };
 
-const navItems: NavItem[] = [
-	{
-		label: "BERANDA",
-		link: "/",
-	},
-	{
-		label: "TENTANG KAMI",
-		link: "/tentang-kami",
-	},
-	{
-		label: "ARMADA",
-		link: "#",
-		children: [
-			{
-				label: "ARMADA TRUK",
-				link: "/armada/truk",
-			},
-			{
-				label: "ARMADA BUS",
-				link: "/armada/bus",
-			},
-		],
-	},
-	{
-		label: "GALERI",
-		link: "/galeri",
-	},
-	{
-		label: "HUBUNGI KAMI",
-		link: "/hubungi-kami",
-	},
-];
-
 function Navbar() {
+	const trNavbar = useTranslations("Navbar");
+
+	const navItems: NavItem[] = [
+		{
+			label: trNavbar("home"),
+			link: "/",
+		},
+		{
+			label: trNavbar("aboutUs"),
+			link: "/tentang-kami",
+		},
+		{
+			label: trNavbar("fleet"),
+			link: "#",
+			children: [
+				{
+					label: trNavbar("fleetTruck"),
+					link: "/armada/truk",
+				},
+				{
+					label: trNavbar("fleetBus"),
+					link: "/armada/bus",
+				},
+			],
+		},
+		{
+			label: trNavbar("gallery"),
+			link: "/galeri",
+		},
+		{
+			label: trNavbar("contactUs"),
+			link: "/hubungi-kami",
+		},
+	];
+
 	return (
 		<>
 			{/* <-- ==== Navbar Mobile Start ==== --> */}

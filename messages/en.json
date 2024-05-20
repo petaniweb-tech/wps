@@ -1,4 +1,14 @@
 {
+	"Navbar": {
+		"home": "HOME",
+		"aboutUs": "ABOUT US",
+		"fleet": "FLEET",
+		"fleetTruck": "FLEET TRUCK",
+		"fleetBus": "FLEET BUS",
+		"gallery": "GALLERY",
+		"contactUs": "CONTACT US"
+	},
+
 	"HeroCarousel": {
 		"heroTitle1": "EXPLORE <br /> WITH US",
 		"heroTitle2": "EXPERIENCED <br /> FOR YEARS",

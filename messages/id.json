@@ -1,4 +1,14 @@
 {
+	"Navbar": {
+		"home": "BERANDA",
+		"aboutUs": "TENTANG KAMI",
+		"fleet": "ARMADA",
+		"fleetTruck": "ARMADA TRUK",
+		"fleetBus": "ARMADA BUS",
+		"gallery": "GALERI",
+		"contactUs": "HUBUNGI KAMI"
+	},
+
 	"HeroCarousel": {
 		"heroTitle1": "MENJELAJAH <br /> BERSAMA KAMI",
 		"heroTitle2": "PENGALAMAN <br /> BERTAHUN-TAHUN",

@@ -28,5 +28,14 @@
 		"visionDescription": "Menjadi mitra yang bisa dipercaya dan berpegang pada <span class='italic font-medium'>&quot;Safety Number One&quot;</span>, ketepatan waktu, dan koordinasi team yang profesional.",
 		"mission": "MISI",
 		"missionDescription": "Secara berkala ingin menjadi perusahaan logistik yang memiliki banyak armada. Mendorong pertumbuhan perusahaan yang menguntungkan dan berkelanjutan, dengan tetap memperhatikan tanggung jawab sosial."
+	},
+
+	"HubungikamiPage": {
+		"formName": "HUBUNGI KAMI",
+		"namePlaceholder": "Nama",
+		"emailPlaceholder": "Email",
+		"phonePlaceholder": "Nomor Telepon",
+		"messagePlaceholder": "Pesan Anda",
+		"submit": "Kirim pesan"
 	}
 }

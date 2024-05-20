@@ -41,8 +41,8 @@ const navItems: NavItem[] = [
 		link: "/galeri",
 	},
 	{
-		label: "CONTACT US",
-		link: "/contact-us",
+		label: "HUBUNGI KAMI",
+		link: "/hubungi-kami",
 	},
 ];
 

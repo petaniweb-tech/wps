@@ -1,9 +1,13 @@
+import { useTranslations } from "next-intl";
+
 export default function ContactForm() {
+	const trHubungikamiPage = useTranslations("HubungikamiPage");
+
 	return (
 		<section className="flex flex-col bg-white w-[48%] h-auto px-8 pt-[26px] pb-8">
 			<div className="flex w-fit border-b-[5px] pr-20 lg:pb-[14px] border-primary">
 				<h1 className="lg:text-2xl font-semibold text-center">
-					CONTACT US
+					{trHubungikamiPage("formName")}
 				</h1>
 			</div>
 			{/* <-- === Form Start === --> */}
@@ -12,7 +16,7 @@ export default function ContactForm() {
 				<div>
 					<input
 						type="text"
-						placeholder="Nama"
+						placeholder={trHubungikamiPage("namePlaceholder")}
 						autoComplete="off"
 						required
 						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
@@ -24,7 +28,7 @@ export default function ContactForm() {
 				<div>
 					<input
 						type="email"
-						placeholder="Email"
+						placeholder={trHubungikamiPage("emailPlaceholder")}
 						autoComplete="off"
 						required
 						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
@@ -36,7 +40,7 @@ export default function ContactForm() {
 				<div>
 					<input
 						type="tel"
-						placeholder="Nomor Telepon"
+						placeholder={trHubungikamiPage("phonePlaceholder")}
 						autoComplete="off"
 						required
 						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
@@ -47,7 +51,7 @@ export default function ContactForm() {
 				{/* <-- == Message Start == --> */}
 				<div>
 					<textarea
-						placeholder="Pesan Anda"
+						placeholder={trHubungikamiPage("messagePlaceholder")}
 						autoComplete="off"
 						rows={6}
 						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
@@ -56,7 +60,7 @@ export default function ContactForm() {
 				{/* <-- == Message End == --> */}
 
 				<button className="w-full bg-primary px-4 pt-3 pb-4 text-base text-white hover:bg-[#3787C8] duration-300">
-					Kirim pesan
+					{trHubungikamiPage("submit")}
 				</button>
 			</form>
 			{/* <-- === Form End === --> */}

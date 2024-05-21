@@ -1,6 +1,8 @@
 "use client";
 
 import * as React from "react";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -16,7 +18,9 @@ interface HeroCarouselProps {
 	banners: {
 		_id: string;
 		title: string;
+		englishTitle: string;
 		description: string;
+		englishDescription: string;
 		image?: string;
 		video?: string;
 		backgroundColor: string;
@@ -29,10 +33,12 @@ export default function HeroCarousel({
 	const [api, setApi] = React.useState<CarouselApi>();
 	const [current, setCurrent] = React.useState(0);
 	const [count, setCount] = React.useState(0);
-
-	const heroTitles = banners.map((banner) => banner?.title ?? "");
+	const pathName = usePathname();
+	
+	const isEn = pathName.startsWith("/en");
+	const heroTitles = banners.map((banner) => isEn ? banner?.englishTitle : banner?.title ?? "");
 	const heroDescriptions = banners.map(
-		(banner) => banner?.description ?? ""
+		(banner) => isEn ? banner?.englishDescription : banner?.description ?? ""
 	);
 	const bgColors = banners.map((banner) => banner?.backgroundColor ?? "");
 	const [heroText, setHeroText] = React.useState(heroTitles[0]);

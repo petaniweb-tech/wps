@@ -14,7 +14,15 @@ export const bannerType = defineType({
       type: "string",
     }),
     defineField({
+      name: "englishTitle",
+      type: "string",
+    }),
+    defineField({
       name: "description",
+      type: "string",
+    }),
+    defineField({
+      name: "englishDescription",
       type: "string",
     }),
     defineField({

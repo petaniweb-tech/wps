@@ -11,7 +11,7 @@ import RouteSection from "../components/route-section";
 import { GaleriSection } from "../components/galeri-section";
 
 export const runtime = "edge";
-const BANNERS_QUERY = `*[_type == "banner"]|order(number asc){_id, title, image, description, video, number, backgroundColor}`;
+const BANNERS_QUERY = `*[_type == "banner"]|order(number asc){_id, title, englishTitle, image, description, englishDescription, video, number, backgroundColor}`;
 
 export interface Banner {
     _id: string;

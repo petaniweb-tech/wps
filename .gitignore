@@ -9,6 +9,10 @@
 # testing
 /coverage
 
+# sanity
+dist/
+.sanity
+
 .env
 .env.*
 

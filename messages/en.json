@@ -1,0 +1,51 @@
+{
+	"Navbar": {
+		"home": "HOME",
+		"aboutUs": "ABOUT US",
+		"fleet": "FLEET",
+		"fleetTruck": "FLEET TRUCK",
+		"fleetBus": "FLEET BUS",
+		"gallery": "GALLERY",
+		"contactUs": "CONTACT US"
+	},
+
+	"HeroCarousel": {
+		"heroTitle1": "EXPLORE <br /> WITH US",
+		"heroTitle2": "EXPERIENCED <br /> FOR YEARS",
+		"heroTitle3": "UNIT <br /> REGENERATION",
+		"heroTitle4": "CSR <br /> PROGRAM",
+		"heroDescription1": "",
+		"heroDescription2": "Since its established in 1985, PT. Wijaya Putra Santoso offers professional and reliable logistics services that have been tested by time.",
+		"heroDescription3": "We are committed to regenerating units to maintain safety in the shipping process and to reduce carbon emissions.",
+		"heroDescription4": "Helping and supporting the surrounding environment and local communities is one of our missions in running the company. One manifestation of this program is to provide free ambulance services."
+	},
+
+	"RouteSection": {
+		"headline": "OUR SERVICE ROUTES",
+		"title": "Serving the islands of Java and Bali",
+		"description": "We are committed to continuing to provide the best service and prioritizing customer satisfaction. To date, we have loyal customers from various business lines who entrust their logistics needs to us.",
+		"ontime": "On time delivery"
+	},
+
+	"GallerySection": {
+		"headline": "GALLERY"
+	},
+
+	"TentangkamiPage": {
+		"headline": "<span class='font-semibold'>Wijaya Putra Santoso</span> will be the solution to your logistics needs. With a strong fleet and <span class='font-semibold'>professional</span> and <span class='font-semibold'>experienced</span> human resources, we will deliver your goods <span class='font-semibold'>safely</span> and <span class='font-semibold'>on time</span>.",
+		"description": "PT. Wijaya Putra Santoso is a privately owned logistics company. Established in 1985 with the initial name <span class='italic'>Wijaya Transportation</span>, and changed its name to Wijaya Putra Santoso in 1992. Starting from 5 units until now we have more than 150 fleets, and will continue to increase as our company grows. Our priority is to offer quality and reliable services.",
+		"vision": "VISION",
+		"visionDescription": "Become a partner who can be trusted and adhere to <span class='italic font-medium'>&quot;Safety Number One&quot;</span>, punctuality, and professional team coordination.",
+		"mission": "MISSION",
+		"missionDescription": "We periodically want to become a logistics company that has a large fleet. Encourage profitable and sustainable company growth, while still paying attention to social responsibility."
+	},
+
+	"HubungikamiPage": {
+		"formName": "CONTACT US",
+		"namePlaceholder": "Name",
+		"emailPlaceholder": "Email",
+		"phonePlaceholder": "Phone Number",
+		"messagePlaceholder": "Your message",
+		"submit": "Send message"
+	}
+}

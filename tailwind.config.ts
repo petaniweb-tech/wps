@@ -20,7 +20,8 @@ const config = {
 		},
 		extend: {
 			backgroundImage: {
-				bgcontact: "url('../../assets/images/dummy-contact.png')",
+				bgcontact:
+					"url('../../../assets/images/gallery/img-gallery-4.webp')",
 			},
 			colors: {
 				primary: "#216CA9",

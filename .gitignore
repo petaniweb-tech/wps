@@ -13,6 +13,13 @@ dist
 # testing
 /coverage
 
+# sanity
+dist/
+.sanity
+
+.env
+.env.*
+
 # next.js
 /.next/
 /out/

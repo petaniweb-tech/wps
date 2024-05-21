@@ -1,0 +1,51 @@
+{
+	"Navbar": {
+		"home": "BERANDA",
+		"aboutUs": "TENTANG KAMI",
+		"fleet": "ARMADA",
+		"fleetTruck": "ARMADA TRUK",
+		"fleetBus": "ARMADA BUS",
+		"gallery": "GALERI",
+		"contactUs": "HUBUNGI KAMI"
+	},
+
+	"HeroCarousel": {
+		"heroTitle1": "MENJELAJAH <br /> BERSAMA KAMI",
+		"heroTitle2": "PENGALAMAN <br /> BERTAHUN-TAHUN",
+		"heroTitle3": "REGENERASI <br /> UNIT",
+		"heroTitle4": "PROGRAM <br /> CSR",
+		"heroDescription1": "",
+		"heroDescription2": "Sejak didirikan tahun 1985, PT. Wijaya Putra Santoso menawarkan jasa logistik dan professional dan terpercaya dan telah teruji oleh waktu.",
+		"heroDescription3": "Kami berkomitmen untuk melakukan regenerasi unit untuk menjaga keamanan dalam proses pengiriman dan untuk mengurangi emisi karbon.",
+		"heroDescription4": "Membantu dan mendukung lingkungan sekitar dan komunitas lokal adalah salah satu Misi kami dalam menjalankan perusahaan. Salah satu perwujudan dari program ini adalah dengan menyediakan layanan ambulans gratis."
+	},
+
+	"RouteSection": {
+		"headline": "RUTE LAYANAN KAMI",
+		"title": "Melayani area Pulau Jawa dan Bali",
+		"description": "Kami berkomitmen untuk terus memberikan pelayanan terbaik dan mengutamakan kepuasan pelanggan. Hingga saat ini kami memiliki pelanggan setia dari berbagai lini usaha yang mempercayakan kebutuhan logistiknya kepada kami.",
+		"ontime": "Pengiriman tepat waktu"
+	},
+
+	"GallerySection": {
+		"headline": "GALERI"
+	},
+
+	"TentangkamiPage": {
+		"headline": "<span class='font-semibold'>Wijaya Putra Santoso</span> akan menjadi solusi kebutuhan logistik anda. Dengan armada yang tangguh dan sumber daya manusia yang <span class='font-semibold'>profesional</span> dan <span class='font-semibold'>berpengalaman</span>, kami akan mengantarkan barang anda dengan <span class='font-semibold'>aman</span> dan <span class='font-semibold'>tepat waktu</span>.",
+		"description": "PT. Wijaya Putra Santoso adalah perusahaan logistik yang dimiliki secara pribadi. Berdiri sejak 1985 dengan nama awal <span class='italic'>Wijaya Transportation</span>, dan berubah nama menjadi Wijaya Putra Santoso pada tahun 1992. Berawal dari 5 unit hingga saat ini kami sudah memiliki lebih dari 150 armada, dan akan terus bertambah seiring bertumbuhnya perusahaan kami. Prioritas kami adalah menawarkan layanan berkualitas dan terpercaya.",
+		"vision": "VISI",
+		"visionDescription": "Menjadi mitra yang bisa dipercaya dan berpegang pada <span class='italic font-medium'>&quot;Safety Number One&quot;</span>, ketepatan waktu, dan koordinasi team yang profesional.",
+		"mission": "MISI",
+		"missionDescription": "Secara berkala ingin menjadi perusahaan logistik yang memiliki banyak armada. Mendorong pertumbuhan perusahaan yang menguntungkan dan berkelanjutan, dengan tetap memperhatikan tanggung jawab sosial."
+	},
+
+	"HubungikamiPage": {
+		"formName": "HUBUNGI KAMI",
+		"namePlaceholder": "Nama",
+		"emailPlaceholder": "Email",
+		"phonePlaceholder": "Nomor Telepon",
+		"messagePlaceholder": "Pesan Anda",
+		"submit": "Kirim pesan"
+	}
+}

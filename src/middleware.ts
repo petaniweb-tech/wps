@@ -1,7 +1,8 @@
 import createMiddleware from "next-intl/middleware";
+import { NextRequest, NextResponse } from "next/server";
 import { locales, localePrefix } from "../lib/navigation";
 
-export default createMiddleware({
+const intlMiddleware = createMiddleware({
 	defaultLocale: "id",
 	localePrefix,
 	locales,
@@ -35,6 +36,18 @@ export default createMiddleware({
 		},
 	},
 });
+
+export function middleware(request: NextRequest) {
+	const pathname = request.nextUrl.pathname;
+
+	if (!locales.some((locale) => pathname.startsWith(`/${locale}`))) {
+		const defaultLocale = "id";
+		const newUrl = new URL(`/${defaultLocale}${pathname}`, request.url);
+		return NextResponse.redirect(newUrl);
+	}
+
+	return intlMiddleware(request);
+}
 
 export const config = {
 	matcher: ["/", "/(en|id)/:path*"],

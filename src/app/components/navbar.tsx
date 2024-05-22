@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { Link } from "../../../lib/navigation";
 
+// Import Components //
+import LocaleSwitcher from "./locale-switcher";
+
 // Import Icons //
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
@@ -104,6 +107,8 @@ function Navbar() {
 							{/* <-- == Dropdown Menu End == --> */}
 						</div>
 					))}
+					{/* <LocaleSwitcher /> */}
+					<LocaleSwitcher />
 				</div>
 				{/* <-- === Navbar Links End === --> */}
 			</nav>

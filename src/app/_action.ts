@@ -30,7 +30,7 @@ export async function sendEmail(data: ContactFormInputs) {
 		try {
 			const data = await resend.emails.send({
 				from: "noreply@petaniweb.com",
-				to: ["aliffirdaus@petaniweb.com"],
+				to: ["ilyas@petaniweb.com", "aliffirdaus@petaniweb.com"],
 				subject: "WPS Contact Form",
 				text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\nMessage: ${message}`,
 				react: ContactFormEmail({

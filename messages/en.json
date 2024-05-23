@@ -46,6 +46,16 @@
 		"emailPlaceholder": "Email",
 		"phonePlaceholder": "Phone Number",
 		"messagePlaceholder": "Your message",
-		"submit": "Send message"
+		"submit": "Send message",
+		"toastSuccess": "Your message has been sent!",
+		"toastError": "Something went wrong"
+	},
+
+	"TrukPage": {
+		"tonnage": "TONNAGE",
+		"length": "Length",
+		"width": "Width",
+		"height": "Height",
+		"load": "Max load"
 	}
 }

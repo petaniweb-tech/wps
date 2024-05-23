@@ -46,6 +46,16 @@
 		"emailPlaceholder": "Email",
 		"phonePlaceholder": "Nomor Telepon",
 		"messagePlaceholder": "Pesan Anda",
-		"submit": "Kirim pesan"
+		"submit": "Kirim pesan",
+		"toastSuccess": "Pesan anda telah terkirim!",
+		"toastError": "Terdapat kesalahan"
+	},
+
+	"TrukPage": {
+		"tonnage": "TONASE",
+		"length": "Panjang",
+		"width": "Lebar",
+		"height": "Tinggi",
+		"load": "Muatan max"
 	}
 }

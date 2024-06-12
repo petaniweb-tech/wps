@@ -14,7 +14,7 @@ export default function Truk() {
 	const trTrukPage = useTranslations("TrukPage");
 
 	return (
-		<section className="w-full flex flex-col gap-44 px-sectionpxlg 2xl:px-sectionpx2xl pt-60 pb-44">
+		<section className="w-full flex flex-col gap-40 px-sectionpxlg 2xl:px-sectionpx2xl pt-60 pb-44">
 			{/* <-- === Drop Side Start === --> */}
 			<div className="flex justify-between items-start gap-20 h-max">
 				<div className="flex flex-col w-full h-full lg:basis-2/4 items-start gap-[86px]">

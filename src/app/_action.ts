@@ -29,7 +29,7 @@ export async function sendEmail(data: ContactFormInputs) {
 		const { name, email, phone, message } = result.data;
 		try {
 			const data = await resend.emails.send({
-				from: "noreply@petaniweb.com",
+				from: "onboarding@resend.dev",
 				to: ["ilyas@petaniweb.com", "aliffirdaus@petaniweb.com"],
 				subject: "WPS Contact Form",
 				text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\nMessage: ${message}`,

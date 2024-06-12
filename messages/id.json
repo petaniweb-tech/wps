@@ -57,5 +57,13 @@
 		"width": "Lebar",
 		"height": "Tinggi",
 		"load": "Muatan max"
+	},
+
+	"BusPage": {
+		"totalSeat": "JUMLAH SEAT",
+		"facilities": "FASILITAS",
+		"facilities1": "Selimut, Bantal,",
+		"facilities2": "Karaoke, Smart TV",
+		"facilities3": "(Netflix, dll), AC Dingin"
 	}
 }

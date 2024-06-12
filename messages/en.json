@@ -57,5 +57,13 @@
 		"width": "Width",
 		"height": "Height",
 		"load": "Max load"
+	},
+
+	"BusPage": {
+		"totalSeat": "TOTAL SEAT",
+		"facilities": "FACILITIES",
+		"facilities1": "Blanket, Pillow,",
+		"facilities2": "Karaoke, Smart TV",
+		"facilities3": "(Netflix, etc), Cold AC"
 	}
 }

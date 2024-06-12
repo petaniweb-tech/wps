@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselPrevious,
-	CarouselNext,
-} from "./ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 
 import Autoplay from "embla-carousel-autoplay";
 

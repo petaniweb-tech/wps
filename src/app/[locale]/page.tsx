@@ -10,7 +10,7 @@ import HeroCarousel from "../components/hero-carousel";
 import RouteSection from "../components/route-section";
 import GaleriSection from "../components/galeri-section";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 const BANNERS_QUERY = `*[_type == "banner"]|order(number asc){_id, title, englishTitle, image, description, englishDescription, video, number, backgroundColor}`;
 const GALLERIES_QUERY = `*[_type == "gallery"]|order(number asc){_id, title, englishTitle, year, image}`;
 

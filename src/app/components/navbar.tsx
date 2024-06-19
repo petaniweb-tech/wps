@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import { useTranslations } from "next-intl";
 import { Link } from "../../../lib/navigation";
 
 // Import Components //
@@ -8,8 +9,9 @@ import LocaleSwitcher from "./locale-switcher";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 // Import Assets //
-import logo from "../../../assets/images/img-logo.webp";
-import { useTranslations } from "next-intl";
+import imgLogo from "../../../assets/images/img-logo.webp";
+import whiteImgLogo from "../../../assets/images/img-logo-white.png";
+import { usePathname } from "next/navigation";
 
 type NavItem = {
 	label: string;
@@ -17,7 +19,11 @@ type NavItem = {
 	children?: NavItem[];
 };
 
-function Navbar() {
+type Props = {
+	isWhiteLogo?: boolean;
+};
+
+function Navbar({ isWhiteLogo }: Props = { isWhiteLogo: false }) {
 	const trNavbar = useTranslations("Navbar");
 
 	const navItems: NavItem[] = [
@@ -63,7 +69,7 @@ function Navbar() {
 				{/* <-- === Logo Start === --> */}
 				<Link href="/">
 					<Image
-						src={logo}
+						src={isWhiteLogo ? whiteImgLogo : imgLogo}
 						alt="Wijaya Putra Santoso"
 						title="Wijaya Putra Santoso"
 						priority={true}

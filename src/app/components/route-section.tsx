@@ -15,7 +15,7 @@ export default function RouteSection() {
 	return (
 		<div>
 			{/* <-- ==== Rute Section Start ==== --> */}
-			<section className="lg:px-sectionpxlg 2xl:px-sectionpx2xl lg:pt-32">
+			<section className="lg:px-sectionpxlg 2xl:px-sectionpx2xl lg:pt-16">
 				<div className="flex justify-center">
 					<div className="flex w-fit lg:border-b-[6px] lg:pb-[14px] border-primary">
 						<h1 className="lg:text-3xl font-semibold text-center">
@@ -23,17 +23,10 @@ export default function RouteSection() {
 						</h1>
 					</div>
 				</div>
-				<div className="w-full h-auto lg:pt-14">
+				<div className="w-full h-auto">
 					<RouteMap />
-					{/* <Image
-              src={dummymap}
-              alt="Rute Layanan"
-              title="Rute Layanan"
-              priority={true}
-              className="w-full h-auto"
-            /> */}
 				</div>
-				<div className="flex justify-between items-center lg:pt-16">
+				<div className="flex justify-between items-center">
 					<div className="w-full flex flex-col lg:pr-20">
 						<h2 className="lg:text-[44px] font-semibold text-black lg:leading-tight">
 							{trRoute("title")}

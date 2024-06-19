@@ -22,7 +22,7 @@ export default function Footer() {
 							WHATSAPP
 						</h5>
 						<p className="lg:text-sm text-white font-light">
-							081332764050
+							0813 3276 4050
 						</p>
 					</div>
 				</div>
@@ -56,7 +56,7 @@ export default function Footer() {
 							EMAIL
 						</h5>
 						<p className="lg:text-sm text-white font-light">
-							wijayaputra@gmail.com
+							wp.trans@yahoo.com
 						</p>
 					</div>
 				</div>

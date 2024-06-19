@@ -114,9 +114,9 @@ export default function HeroCarousel({
           <div className="w-full">
             <div
               className="w-full px-8 py-6 flex justify-between items-start"
-			  style={{
-				backgroundColor: `${heroColor}`,
-			  }}>
+              style={{
+                backgroundColor: `${heroColor}`,
+              }}>
               <h1
                 className="text-[50px] text-white font-semibold leading-tight w-full"
                 dangerouslySetInnerHTML={{ __html: heroText }}

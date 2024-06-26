@@ -5,17 +5,16 @@ import { useTranslations } from "next-intl";
 import RouteMap from "./route-map";
 
 // Import Assets //
-import dummymap from "../../../assets/images/dummy-map.png";
-import ontime from "../../../assets/icons/icon-ontime.png";
-import safety from "../../../assets/icons/icon-safetyfirst.png";
-import professional from "../../../assets/icons/icon-professional.png";
+import ontime from "../../../assets/icons/icon-ontime.svg";
+import safety from "../../../assets/icons/icon-safetyfirst.svg";
+import professional from "../../../assets/icons/icon-professional.svg";
 
 export default function RouteSection() {
 	const trRoute = useTranslations("RouteSection");
 	return (
 		<div>
 			{/* <-- ==== Rute Section Start ==== --> */}
-			<section className="lg:px-sectionpxlg 2xl:px-sectionpx2xl lg:pt-16">
+			<section className="lg:px-sectionpxlg 2xl:px-sectionpx2xl lg:pt-36">
 				<div className="flex justify-center">
 					<div className="flex w-fit lg:border-b-[6px] lg:pb-[14px] border-primary">
 						<h1 className="lg:text-3xl font-semibold text-center">
@@ -23,10 +22,10 @@ export default function RouteSection() {
 						</h1>
 					</div>
 				</div>
-				<div className="w-full h-auto">
+				<div className="w-full h-auto mt-10">
 					<RouteMap />
 				</div>
-				<div className="flex justify-between items-center">
+				<div className="flex justify-between items-center mt-16">
 					<div className="w-full flex flex-col lg:pr-20">
 						<h2 className="lg:text-[44px] font-semibold text-black lg:leading-tight">
 							{trRoute("title")}
@@ -42,7 +41,7 @@ export default function RouteSection() {
 									src={ontime}
 									alt="Pengiriman Tepat Waktu"
 									priority={true}
-									className="h-12 w-auto"
+									className="h-11 w-auto"
 								/>
 								<h3 className="text-lg">{trRoute("ontime")}</h3>
 							</div>

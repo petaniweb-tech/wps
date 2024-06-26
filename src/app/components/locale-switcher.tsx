@@ -13,7 +13,19 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 import idflag from "../../../assets/icons/icon-id.svg";
 import enflag from "../../../assets/icons/icon-en.svg";
 
-export default function LocaleSwitcher() {
+interface LocaleSwitcherProps {
+	menuColor: string;
+	menuHover: string;
+	dropdownColor: string;
+	dropdownHover: string;
+}
+
+export default function LocaleSwitcher({
+	menuColor,
+	menuHover,
+	dropdownColor,
+	dropdownHover,
+}: LocaleSwitcherProps) {
 	const [isPending, startTransition] = useTransition();
 	const router = useRouter();
 	const locale = useLocale();
@@ -64,7 +76,7 @@ export default function LocaleSwitcher() {
 			className="relative group px-2 py-3 transition-all"
 		>
 			<div
-				className="flex cursor-pointer text-sm items-center gap-2 text-gray-300 group-hover:text-white duration-300"
+				className={`flex cursor-pointer text-sm items-center gap-2 ${menuColor} group-hover:${menuHover} duration-300`}
 				onClick={() => setDropdownOpen(!isDropdownOpen)}
 			>
 				<div className="flex items-center gap-[10px]">
@@ -84,7 +96,7 @@ export default function LocaleSwitcher() {
 			{isDropdownOpen && (
 				<div className="absolute right-0 top-11 flex w-auto flex-col gap-1 rounded bg-white py-2 px-2 shadow-md transition-all flex-nowrap">
 					<div
-						className="group flex cursor-pointer justify-start items-center py-2 pl-3 pr-12 gap-[10px] w-full rounded hover:bg-[#EDEDED] text-sm text-[#686868] hover:text-black duration-300"
+						className={`group flex cursor-pointer justify-start items-center py-2 pl-3 pr-12 gap-[10px] w-full rounded hover:bg-[#EDEDED] text-sm ${dropdownColor} hover:${dropdownHover} duration-300`}
 						onClick={() => handleLocaleChange("id")}
 					>
 						<Image
@@ -96,7 +108,7 @@ export default function LocaleSwitcher() {
 						<div className="whitespace-nowrap">ID</div>
 					</div>
 					<div
-						className="group flex cursor-pointer justify-start items-center py-2 pl-3 pr-12 gap-[10px] w-full rounded hover:bg-[#EDEDED] text-sm text-[#686868] hover:text-black duration-300"
+						className={`group flex cursor-pointer justify-start items-center py-2 pl-3 pr-12 gap-[10px] w-full rounded hover:bg-[#EDEDED] text-sm ${dropdownColor} hover:${dropdownHover} duration-300`}
 						onClick={() => handleLocaleChange("en")}
 					>
 						<Image

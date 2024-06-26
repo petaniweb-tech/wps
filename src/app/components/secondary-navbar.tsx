@@ -1,5 +1,6 @@
+"use client";
+
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../lib/navigation";
 
@@ -10,7 +11,7 @@ import LocaleSwitcher from "./locale-switcher";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 // Import Assets //
-import whitelogo from "../../../assets/images/img-white-logo.webp";
+import coloredlogo from "../../../assets/images/img-colored-logo.webp";
 
 type NavItem = {
 	label: string;
@@ -18,7 +19,7 @@ type NavItem = {
 	children?: NavItem[];
 };
 
-function Navbar() {
+function SecondaryNavbar() {
 	const trNavbar = useTranslations("Navbar");
 
 	const navItems: NavItem[] = [
@@ -54,46 +55,18 @@ function Navbar() {
 		},
 	];
 
-	// Navbar Background //
-	const [scrolling, setScrolling] = useState(false);
-
-	const handleScroll = () => {
-		if (window.scrollY > 0) {
-			setScrolling(true);
-		} else {
-			setScrolling(false);
-		}
-	};
-
-	useEffect(() => {
-		if (window.scrollY > 0) {
-			setScrolling(true);
-		}
-
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
-
 	return (
 		<>
 			{/* <-- ==== Navbar Mobile Start ==== --> */}
 			{/* <-- ==== Navbar Mobile End ==== --> */}
 
 			{/* <-- ==== Navbar Desktop Start ==== --> */}
-			<nav
-				className={`hidden fixed lg:flex w-full z-50 px-sectionpxlg 2xl:px-sectionpx2xl justify-between items-center py-5 transition-all duration-300 ${
-					scrolling
-						? "bg-black bg-opacity-45 backdrop-blur-lg"
-						: "bg-transparent"
-				}`}
-			>
+			<nav className="hidden fixed lg:flex w-full z-[100] px-sectionpxlg 2xl:px-sectionpx2xl justify-between items-center py-5 bg-white bg-opacity-25 backdrop-blur-lg">
 				{/* <-- === Logo Start === --> */}
 				<Link href="/">
-					<div className="w-fit h-fit py-[10px]">
+					<div className="w-fit h-fit pt-[10px]">
 						<Image
-							src={whitelogo}
+							src={coloredlogo}
 							alt="Wijaya Putra Santoso"
 							title="Wijaya Putra Santoso"
 							priority={true}
@@ -111,7 +84,7 @@ function Navbar() {
 							className="relative group px-2 py-3 transition-all"
 						>
 							<Link href={d.link ?? "#"}>
-								<div className="flex cursor-pointer text-sm items-center gap-2 text-gray-300 group-hover:text-white duration-300">
+								<div className="flex cursor-pointer text-sm items-center gap-2 text-neutral-600 group-hover:text-black duration-300">
 									<div>{d.label}</div>
 									{d.children && (
 										<ChevronDownIcon className="transition-all group-hover:rotate-180" />
@@ -126,7 +99,7 @@ function Navbar() {
 										<Link
 											key={j}
 											href={ch.link}
-											className="group flex cursor-pointer items-center py-2 px-3 w-full rounded hover:bg-[#EDEDED] text-sm text-[#686868] hover:text-black duration-300"
+											className="group flex cursor-pointer items-center py-2 px-3 w-full rounded hover:bg-[#EDEDED] text-sm text-neutral-500 hover:text-black duration-300"
 										>
 											<div className="whitespace-nowrap">
 												{ch.label}
@@ -140,8 +113,8 @@ function Navbar() {
 					))}
 					{/* <LocaleSwitcher /> */}
 					<LocaleSwitcher
-						menuColor="text-gray-300"
-						menuHover="text-white"
+						menuColor="text-neutral-600"
+						menuHover="text-black"
 						dropdownColor="text-neutral-600"
 						dropdownHover="text-black"
 					/>
@@ -153,4 +126,4 @@ function Navbar() {
 	);
 }
 
-export default Navbar;
+export default SecondaryNavbar;

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local';
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 // Import Components //
-import Navbar from "../components/navbar";
+import { NextIntlClientProvider } from "next-intl";
+import ConditionalNavbar from "../components/conditional-navbar";
 import Footer from "../components/footer";
 import { Toaster } from "../components/ui/toaster";
 
 const inter = localFont({
-	src: '../../../assets/fonts/Helvetica.ttf',
-	display: 'swap'
+	src: "../../../assets/fonts/Helvetica.ttf",
+	display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,24 +21,30 @@ export const metadata: Metadata = {
 export interface RootLayoutProps {
 	children: React.ReactNode;
 	params: {
-		defaultLocale: string;
+		locale: string;
 	};
 }
 
 export default function RootLayout({
 	children,
-	params: { defaultLocale },
-}: Readonly<RootLayoutProps>) {
+	params: { locale },
+}: RootLayoutProps) {
+	let messages;
+	try {
+		messages = require(`../../../messages/${locale}.json`);
+	} catch (error) {
+		console.error(`Could not load messages for locale: ${locale}`);
+	}
+
 	return (
-		<html
-			lang={defaultLocale}
-			className={`scroll-smooth ${inter.className}`}
-		>
+		<html lang={locale} className={`scroll-smooth ${inter.className}`}>
 			<body className="bg-white">
-				<Navbar isWhiteLogo={true} />
-				{children}
-				<Toaster />
-				<Footer />
+				<NextIntlClientProvider locale={locale} messages={messages}>
+					<ConditionalNavbar />
+					{children}
+					<Toaster />
+					<Footer />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

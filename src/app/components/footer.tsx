@@ -22,7 +22,7 @@ export default function Footer() {
 							WHATSAPP
 						</h5>
 						<p className="lg:text-sm text-white font-light">
-							0813 3276 4050
+							0821 3251 4522
 						</p>
 					</div>
 				</div>

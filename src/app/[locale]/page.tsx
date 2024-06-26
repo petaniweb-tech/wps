@@ -7,8 +7,8 @@ import { urlForVideo } from "../../../sanity/lib/file";
 
 // Import Components //
 import HeroCarousel from "../components/hero-carousel";
-import RouteSection from "../components/route-section";
-import GaleriSection from "../components/galeri-section";
+import RouteSection from "../components/sections/route-section";
+import GaleriSection from "../components/sections/galeri-section";
 
 // export const runtime = "edge";
 const BANNERS_QUERY = `*[_type == "banner"]|order(number asc){_id, title, englishTitle, image, description, englishDescription, video, number, backgroundColor}`;

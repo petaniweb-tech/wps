@@ -8,7 +8,6 @@ import TruckWingboxCarousel from "@/app/components/truck-wingbox-carousel";
 import TruckLongtrailerCarousel from "@/app/components/truck-longtrailer-carousel";
 
 // Import Assets //
-import icondummytruck from "../../../../../assets/icons/icon-dummy-truck.png";
 import dropsideicon from "../../../../../assets/icons/icon-dropside.svg";
 import wingboxicon from "../../../../../assets/icons/icon-wingbox.svg";
 import longtrailericon from "../../../../../assets/icons/icon-longtrailer.svg";

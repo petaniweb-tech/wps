@@ -9,6 +9,9 @@ import TruckLongtrailerCarousel from "@/app/components/truck-longtrailer-carouse
 
 // Import Assets //
 import icondummytruck from "../../../../../assets/icons/icon-dummy-truck.png";
+import dropsideicon from "../../../../../assets/icons/icon-dropside.svg";
+import wingboxicon from "../../../../../assets/icons/icon-wingbox.svg";
+import longtrailericon from "../../../../../assets/icons/icon-longtrailer.svg";
 
 export default function Truk() {
 	const trTrukPage = useTranslations("TrukPage");
@@ -24,9 +27,9 @@ export default function Truk() {
 							DROP SIDE
 						</h1>
 					</div>
-					<div className="px-24 flex justify-center items-center">
+					<div className="px-20 flex justify-center items-center">
 						<Image
-							src={icondummytruck}
+							src={dropsideicon}
 							alt="Drop Side Truck"
 							priority={true}
 							className="w-full h-auto"
@@ -38,7 +41,7 @@ export default function Truk() {
 								{trTrukPage("tonnage")}
 							</p>
 							<p className="text-[17px] font-semibold text-right">
-								20.000 - 25.000 Kg
+								max 31T
 							</p>
 						</div>
 						<div className="w-full h-[2px] bg-black"></div>
@@ -82,9 +85,9 @@ export default function Truk() {
 							WING BOX
 						</h1>
 					</div>
-					<div className="px-24 flex justify-center items-center">
+					<div className="px-20 flex justify-center items-center">
 						<Image
-							src={icondummytruck}
+							src={wingboxicon}
 							alt="Wing Box Truck"
 							priority={true}
 							className="w-full h-auto"
@@ -96,7 +99,7 @@ export default function Truk() {
 								{trTrukPage("tonnage")}
 							</p>
 							<p className="text-[17px] font-semibold text-right">
-								20.000 - 25.000 Kg
+								20T - 28T
 							</p>
 						</div>
 						<div className="w-full h-[2px] bg-black"></div>
@@ -140,10 +143,10 @@ export default function Truk() {
 							LONG TRAILER
 						</h1>
 					</div>
-					<div className="px-24 flex justify-center items-center">
+					<div className="px-20 flex justify-center items-center">
 						<Image
-							src={icondummytruck}
-							alt="Wing Box Truck"
+							src={longtrailericon}
+							alt="Long Trailer Icon"
 							priority={true}
 							className="w-full h-auto"
 						/>
@@ -154,7 +157,7 @@ export default function Truk() {
 								{trTrukPage("tonnage")}
 							</p>
 							<p className="text-[17px] font-semibold text-right">
-								20.000 - 25.000 Kg
+								max 55T
 							</p>
 						</div>
 						<div className="w-full h-[2px] bg-black"></div>

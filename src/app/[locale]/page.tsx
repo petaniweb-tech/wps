@@ -33,10 +33,10 @@ export interface Gallery {
 [];
 
 const mapRgba = (rgb: any): string => {
-	const { r, g, b, a} = rgb;
+	const { r, g, b, a } = rgb;
 
-  return `rgba(${r}, ${g}, ${b}, ${a})`;
-}
+	return `rgba(${r}, ${g}, ${b}, ${a})`;
+};
 
 export default async function Home() {
 	const banners = await sanityFetch<SanityDocument[]>({
@@ -44,13 +44,13 @@ export default async function Home() {
 	});
 	const formattedBanners = banners.map((banner: any) => {
 		return {
-      ...banner,
-      ...(banner?.image && { image: urlForImage(banner.image) }),
-      ...(banner?.video && { video: urlForVideo(banner.video) }),
-      ...(banner?.backgroundColor?.rgb && {
-        backgroundColor: mapRgba(banner?.backgroundColor?.rgb),
-      }),
-    };
+			...banner,
+			...(banner?.image && { image: urlForImage(banner.image) }),
+			...(banner?.video && { video: urlForVideo(banner.video) }),
+			...(banner?.backgroundColor?.rgb && {
+				backgroundColor: mapRgba(banner?.backgroundColor?.rgb),
+			}),
+		};
 	});
 
 	const galleries = await sanityFetch<SanityDocument[]>({

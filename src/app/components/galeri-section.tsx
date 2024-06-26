@@ -37,7 +37,7 @@ export default function GaleriSection({ galleries }: GaleriSectionProps) {
 				</div>
 
 				{/* <-- ==== Galeri Carousel Start ==== --> */}
-				<div className="w-full pt-24">
+				<div className="w-full pt-20">
 					<GaleriCarousel galleries={galleries} />
 				</div>
 				{/* <-- ==== Galeri Carousel End ==== --> */}

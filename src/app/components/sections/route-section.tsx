@@ -2,12 +2,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 // Import Components //
-import RouteMap from "./route-map";
+import RouteMap from "../route-map";
 
 // Import Assets //
-import ontime from "../../../assets/icons/icon-ontime.svg";
-import safety from "../../../assets/icons/icon-safetyfirst.svg";
-import professional from "../../../assets/icons/icon-professional.svg";
+import ontime from "../../../../assets/icons/icon-ontime.svg";
+import safety from "../../../../assets/icons/icon-safetyfirst.svg";
+import professional from "../../../../assets/icons/icon-professional.svg";
 
 export default function RouteSection() {
 	const trRoute = useTranslations("RouteSection");

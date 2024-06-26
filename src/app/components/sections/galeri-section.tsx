@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import GaleriCarousel from "./galeri-carousel";
+import GaleriCarousel from "../galeri-carousel";
 
 export const runtime = "edge";
 const GALLERIES_QUERY = `*[_type == "gallery"]|order(number asc){_id, title, englishTitle, year, image}`;

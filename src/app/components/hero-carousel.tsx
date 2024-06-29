@@ -30,8 +30,8 @@ interface HeroCarouselProps {
 
 export default function HeroCarousel({ banners }: HeroCarouselProps) {
 	const [swiperRef, setSwiperRef] = React.useState<SwiperRef | null>(null);
-	const [current, setCurrent] = React.useState(0);
-	const [count, setCount] = React.useState(0);
+	const [current, setCurrent] = React.useState(1);
+	const [count, setCount] = React.useState(banners.length);
 	const pathName = usePathname();
 
 	const isEn = pathName.startsWith("/en");
@@ -54,6 +54,8 @@ export default function HeroCarousel({ banners }: HeroCarouselProps) {
 		}
 
 		setCount(swiperRef.slides.length);
+		setCurrent(swiperRef.realIndex + 1);
+
 		swiperRef.on("slideChange", () => {
 			const selectedIndex = swiperRef.realIndex;
 			setCurrent(selectedIndex + 1);

@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { Link } from "../../../lib/navigation";
+import {
+	getNavItems,
+	getSelectedMenuClass,
+	NavItem,
+} from "../../utils/navbarutils";
 
 // Import Components //
 import LocaleSwitcher from "./locale-switcher";
@@ -12,144 +18,84 @@ import { ChevronDownIcon } from "@radix-ui/react-icons";
 // Import Assets //
 import whitelogo from "../../../assets/images/img-white-logo.webp";
 
-type NavItem = {
-	label: string;
-	link: string;
-	children?: NavItem[];
-};
-
 function Navbar() {
 	const trNavbar = useTranslations("Navbar");
 
-	const navItems: NavItem[] = [
-		{
-			label: trNavbar("home"),
-			link: "/",
-		},
-		{
-			label: trNavbar("aboutUs"),
-			link: "/tentang-kami",
-		},
-		{
-			label: trNavbar("fleet"),
-			link: "#",
-			children: [
-				{
-					label: trNavbar("fleetTruck"),
-					link: "/armada/truk",
-				},
-				{
-					label: trNavbar("fleetBus"),
-					link: "/armada/bus",
-				},
-			],
-		},
-		{
-			label: trNavbar("gallery"),
-			link: "/galeri",
-		},
-		{
-			label: trNavbar("contactUs"),
-			link: "/hubungi-kami",
-		},
-	];
+	const pathname = usePathname();
+	const segments = pathname.split("/");
 
-	// Navbar Background //
+	const strippedPathname =
+		segments.length > 2 ? `/${segments.slice(2).join("/")}` : "/";
+
+	const navItems: NavItem[] = getNavItems(trNavbar);
+
 	const [scrolling, setScrolling] = useState(false);
 
-	const handleScroll = () => {
-		if (window.scrollY > 0) {
-			setScrolling(true);
-		} else {
-			setScrolling(false);
-		}
-	};
-
 	useEffect(() => {
-		if (window.scrollY > 0) {
-			setScrolling(true);
-		}
-
+		const handleScroll = () => setScrolling(window.scrollY > 0);
 		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
+		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	return (
-		<>
-			{/* <-- ==== Navbar Mobile Start ==== --> */}
-			{/* <-- ==== Navbar Mobile End ==== --> */}
-
-			{/* <-- ==== Navbar Desktop Start ==== --> */}
-			<nav
-				className={`hidden fixed lg:flex w-full z-50 px-sectionpxlg 2xl:px-sectionpx2xl justify-between items-center py-5 transition-all duration-300 ${
-					scrolling
-						? "bg-black bg-opacity-45 backdrop-blur-lg"
-						: "bg-transparent"
-				}`}
-			>
-				{/* <-- === Logo Start === --> */}
-				<Link href="/">
-					<div className="w-fit h-fit py-[10px]">
-						<Image
-							src={whitelogo}
-							alt="Wijaya Putra Santoso"
-							title="Wijaya Putra Santoso"
-							priority={true}
-							className="h-9 w-auto"
-						/>
-					</div>
-				</Link>
-				{/* <-- === Logo End === --> */}
-
-				{/* <-- === Navbar Links Start === --> */}
-				<div className="flex items-center gap-4 transition-all">
-					{navItems.map((d, i) => (
-						<div
-							key={i}
-							className="relative group px-2 py-3 transition-all"
-						>
-							<Link href={d.link ?? "#"}>
-								<div className="flex cursor-pointer text-sm items-center gap-2 text-gray-300 group-hover:text-white duration-300">
-									<div>{d.label}</div>
-									{d.children && (
-										<ChevronDownIcon className="transition-all group-hover:rotate-180" />
-									)}
-								</div>
-							</Link>
-
-							{/* <-- == Dropdown Menu Start == --> */}
-							{d.children && (
-								<div className="absolute left-0 top-11 hidden w-auto flex-col gap-1 rounded bg-white py-2 px-2 shadow-md transition-all group-hover:flex">
-									{d.children.map((ch, j) => (
-										<Link
-											key={j}
-											href={ch.link}
-											className="group flex cursor-pointer items-center py-2 px-3 w-full rounded hover:bg-[#EDEDED] text-sm text-[#686868] hover:text-black duration-300"
-										>
-											<div className="whitespace-nowrap">
-												{ch.label}
-											</div>
-										</Link>
-									))}
-								</div>
-							)}
-							{/* <-- == Dropdown Menu End == --> */}
-						</div>
-					))}
-					{/* <LocaleSwitcher /> */}
-					<LocaleSwitcher
-						menuColor="text-gray-300"
-						menuHover="text-white"
-						dropdownColor="text-neutral-600"
-						dropdownHover="text-black"
+		<nav
+			className={`hidden fixed lg:flex w-full z-[100] px-sectionpxlg 2xl:px-sectionpx2xl justify-between items-center py-5 transition-all duration-300 ${
+				scrolling
+					? "bg-black bg-opacity-45 backdrop-blur-lg"
+					: "bg-transparent"
+			}`}
+		>
+			<Link href="/">
+				<div className="w-fit h-fit py-[10px]">
+					<Image
+						src={whitelogo}
+						alt="Wijaya Putra Santoso"
+						title="Wijaya Putra Santoso"
+						priority={true}
+						className="h-9 w-auto"
 					/>
 				</div>
-				{/* <-- === Navbar Links End === --> */}
-			</nav>
-			{/* <-- ==== Navbar Desktop End ==== --> */}
-		</>
+			</Link>
+
+			<div className="flex items-start gap-4 transition-all border-b-[1px] border-white border-opacity-30">
+				{navItems.map((d, i) => (
+					<div
+						key={i}
+						className={`relative group px-2 pb-[14px] transition-all ${getSelectedMenuClass(strippedPathname, d.link, "border-white")}`}
+					>
+						<Link href={d.link ?? "#"}>
+							<div className="flex cursor-pointer text-sm items-center gap-2 text-neutral-200 group-hover:text-white duration-300">
+								<div>{d.label}</div>
+								{d.children && (
+									<ChevronDownIcon className="transition-all group-hover:rotate-180" />
+								)}
+							</div>
+						</Link>
+						{d.children && (
+							<div className="absolute left-0 top-9 hidden w-auto flex-col gap-1 rounded bg-white py-2 px-2 shadow-md transition-all group-hover:flex">
+								{d.children.map((ch, j) => (
+									<Link
+										key={j}
+										href={ch.link}
+										className="group flex cursor-pointer items-center py-2 px-3 w-full rounded hover:bg-[#EDEDED] text-sm text-[#686868] hover:text-black duration-300"
+									>
+										<div className="whitespace-nowrap">
+											{ch.label}
+										</div>
+									</Link>
+								))}
+							</div>
+						)}
+					</div>
+				))}
+				<LocaleSwitcher
+					menuColor="text-neutral-200"
+					menuHover="text-white"
+					dropdownColor="text-neutral-600"
+					dropdownHover="text-black"
+				/>
+			</div>
+		</nav>
 	);
 }
 

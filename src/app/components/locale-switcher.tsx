@@ -71,10 +71,7 @@ export default function LocaleSwitcher({
 	}, [pathname]);
 
 	return (
-		<div
-			ref={dropdownRef}
-			className="relative group px-2 py-3 transition-all"
-		>
+		<div ref={dropdownRef} className="relative">
 			<div
 				className={`flex cursor-pointer text-sm items-center gap-2 ${menuColor} group-hover:${menuHover} duration-300`}
 				onClick={() => setDropdownOpen(!isDropdownOpen)}
@@ -94,7 +91,7 @@ export default function LocaleSwitcher({
 			</div>
 
 			{isDropdownOpen && (
-				<div className="absolute right-0 top-11 flex w-auto flex-col gap-1 rounded bg-white py-2 px-2 shadow-md transition-all flex-nowrap">
+				<div className="absolute right-0 top-9 flex w-auto flex-col gap-1 rounded bg-white py-2 px-2 shadow-md transition-all flex-nowrap">
 					<div
 						className={`group flex cursor-pointer justify-start items-center py-2 pl-3 pr-12 gap-[10px] w-full rounded hover:bg-[#EDEDED] text-sm ${dropdownColor} hover:${dropdownHover} duration-300`}
 						onClick={() => handleLocaleChange("id")}

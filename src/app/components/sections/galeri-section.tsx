@@ -1,4 +1,6 @@
 import { useTranslations } from "next-intl";
+
+// Import Components //
 import GaleriCarousel from "../galeri-carousel";
 
 export const runtime = "edge";
@@ -38,6 +40,7 @@ export default function GaleriSection({ galleries }: GaleriSectionProps) {
 
 				{/* <-- ==== Galeri Carousel Start ==== --> */}
 				<div className="w-full pt-20">
+					{/* <GaleriCarousel galleries={galleries} /> */}
 					<GaleriCarousel galleries={galleries} />
 				</div>
 				{/* <-- ==== Galeri Carousel End ==== --> */}

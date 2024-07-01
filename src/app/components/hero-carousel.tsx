@@ -140,8 +140,8 @@ export default function HeroCarousel({ banners }: HeroCarouselProps) {
 						</div>
 					</div>
 					<div className="block w-fit">
-						<h2 className="text-[40px] text-nowrap tracking-tighter text-white font-semibold">
-							{current} / {count}
+						<h2 className="text-[40px] text-nowrap tracking-[0.15em] text-white font-semibold">
+							{current}/{count}
 						</h2>
 					</div>
 				</div>

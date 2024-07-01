@@ -5,9 +5,9 @@ import { useTranslations } from "next-intl";
 import RouteMap from "../route-map";
 
 // Import Assets //
-import ontime from "../../../../assets/icons/icon-ontime.svg";
-import safety from "../../../../assets/icons/icon-safetyfirst.svg";
-import professional from "../../../../assets/icons/icon-professional.svg";
+import ontime from "../../../../assets/icons/icon-ontime.webp";
+import safetyfirst from "../../../../assets/icons/icon-safetyfirst.webp";
+import professional from "../../../../assets/icons/icon-professional.webp";
 
 export default function RouteSection() {
 	const trRoute = useTranslations("RouteSection");
@@ -47,7 +47,7 @@ export default function RouteSection() {
 							</div>
 							<div className="flex justify-start lg:pl-7 lg:pt-5 lg:pb-6 items-center lg:gap-6 border-b border-black">
 								<Image
-									src={safety}
+									src={safetyfirst}
 									alt="Safety First"
 									priority={true}
 									className="h-11 w-auto"

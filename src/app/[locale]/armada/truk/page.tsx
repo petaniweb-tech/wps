@@ -8,9 +8,9 @@ import TruckWingboxCarousel from "@/app/components/truck-wingbox-carousel";
 import TruckLongtrailerCarousel from "@/app/components/truck-longtrailer-carousel";
 
 // Import Assets //
-import dropsideicon from "../../../../../assets/icons/icon-dropside.svg";
-import wingboxicon from "../../../../../assets/icons/icon-wingbox.svg";
-import longtrailericon from "../../../../../assets/icons/icon-longtrailer.svg";
+import dropsideicon from "../../../../../assets/icons/icon-dropside.webp";
+import wingboxicon from "../../../../../assets/icons/icon-wingbox.webp";
+import longtrailericon from "../../../../../assets/icons/icon-longtrailer.webp";
 
 export default function Truk() {
 	const trTrukPage = useTranslations("TrukPage");

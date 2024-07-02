@@ -28,7 +28,7 @@ interface HeroCarouselProps {
 	}[];
 }
 
-export default function HeroCarousel({ banners }: HeroCarouselProps) {
+export default function HeroCarouselMobile({ banners }: HeroCarouselProps) {
 	const [swiperRef, setSwiperRef] = React.useState<SwiperRef | null>(null);
 	const [current, setCurrent] = React.useState(1);
 	const [count, setCount] = React.useState(banners.length);
@@ -77,6 +77,7 @@ export default function HeroCarousel({ banners }: HeroCarouselProps) {
 			className="w-full relative"
 		>
 			<SwiperNavigation />
+
 			{banners.map((banner) => (
 				<SwiperSlide
 					key={banner._id}
@@ -108,43 +109,39 @@ export default function HeroCarousel({ banners }: HeroCarouselProps) {
 					)}
 				</SwiperSlide>
 			))}
-			<div className="absolute z-40 px-sectionpxlg pb-[70px] inset-0 flex flex-col justify-end gap-[14px]">
-				<div className="w-full">
-					<div
-						className="w-full px-8 py-6 flex justify-between items-start"
-						style={{
-							backgroundColor: `${heroColor}`,
+
+			<div className="absolute z-40 w-full inset-0 flex flex-col justify-end">
+				<div
+					className="w-full py-8 flex flex-col px-sectionpxsm items-start gap-3 h-[44%] relative"
+					style={{
+						backgroundColor: `${heroColor}`,
+					}}
+				>
+					<h1
+						className="text-3xl text-white font-semibold leading-snug w-full"
+						dangerouslySetInnerHTML={{
+							__html: heroText,
 						}}
-					>
-						<h1
-							className="text-[50px] text-white font-semibold leading-tight w-full"
-							dangerouslySetInnerHTML={{
-								__html: heroText,
-							}}
-						></h1>
-						<p className="text-[15px] text-white font-light basis-4/5 pt-1">
-							{heroDescription}
-						</p>
-					</div>
-				</div>
-				<div className="flex w-full items-center justify-between gap-10">
-					<div className="flex w-fit">
-						<p className="text-base text-white">0{current}</p>
-					</div>
-					<div className="w-full flex items-center bg-white h-[1px] bg-opacity-70">
-						<div className="flex w-full">
-							{banners.map((_, index) => (
-								<div
-									key={index}
-									className={`h-[5px] flex-1 ${current - 1 === index ? "bg-white" : ""}`}
-								></div>
-							))}
+					></h1>
+					<p className="text-[15px] text-white font-light leading-relaxed">
+						{heroDescription}
+					</p>
+
+					<div className="absolute bottom-0 left-0 w-full flex px-sectionpxsm">
+						<div className="w-full flex items-center bg-white h-[1px] bg-opacity-70 mb-10">
+							<div className="flex w-full">
+								{banners.map((_, index) => (
+									<div
+										key={index}
+										className={`h-[5px] flex-1 ${
+											current - 1 === index
+												? "bg-white"
+												: ""
+										}`}
+									></div>
+								))}
+							</div>
 						</div>
-					</div>
-					<div className="block w-fit">
-						<h2 className="text-[40px] text-nowrap tracking-[0.15em] text-white font-semibold">
-							{current}/{count}
-						</h2>
 					</div>
 				</div>
 			</div>

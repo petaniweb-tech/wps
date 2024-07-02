@@ -62,7 +62,7 @@ export default function Truk() {
 									{trTrukPage("height")}
 								</p>
 								<p className="text-[17px] text-right">
-									{trTrukPage("load")} 2.60m
+									Max 2.60m
 								</p>
 							</div>
 						</div>
@@ -120,7 +120,7 @@ export default function Truk() {
 									{trTrukPage("height")}
 								</p>
 								<p className="text-[17px] text-right">
-									{trTrukPage("load")} 2.60m
+									2.35m - 2.50m
 								</p>
 							</div>
 						</div>
@@ -165,20 +165,20 @@ export default function Truk() {
 								<p className="text-[17px] text-left">
 									{trTrukPage("length")}
 								</p>
-								<p className="text-[17px] text-right">9.5m</p>
+								<p className="text-[17px] text-right">14m</p>
 							</div>
 							<div className="flex items-center justify-between">
 								<p className="text-[17px] text-left">
 									{trTrukPage("width")}
 								</p>
-								<p className="text-[17px] text-right">2.40m</p>
+								<p className="text-[17px] text-right">2.50m</p>
 							</div>
 							<div className="flex items-center justify-between">
 								<p className="text-[17px] text-left">
 									{trTrukPage("height")}
 								</p>
 								<p className="text-[17px] text-right">
-									{trTrukPage("load")} 2.60m
+									Max 2.60m
 								</p>
 							</div>
 						</div>

@@ -9,6 +9,7 @@ import { urlForVideo } from "../../../sanity/lib/file";
 import HeroCarousel from "../components/hero-carousel";
 import RouteSection from "../components/sections/route-section";
 import GaleriSection from "../components/sections/galeri-section";
+import HeroCarouselMobile from "../components/hero-carousel-mobile";
 
 // export const runtime = "edge";
 const BANNERS_QUERY = `*[_type == "banner"]|order(number asc){_id, title, englishTitle, image, description, englishDescription, video, number, backgroundColor}`;
@@ -65,9 +66,12 @@ export default async function Home() {
 
 	return (
 		<>
-			<div className="mt-96 lg:hidden"></div>
 			{/* <-- ==== Hero Section Start ==== --> */}
-			<div className="w-full h-screen">
+			<div className="w-full h-screen block lg:hidden">
+				<HeroCarouselMobile banners={formattedBanners} />
+			</div>
+
+			<div className="w-full h-screen hidden lg:block">
 				<HeroCarousel banners={formattedBanners} />
 			</div>
 			{/* <-- ==== Hero Section End ==== --> */}

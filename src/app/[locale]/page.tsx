@@ -65,6 +65,7 @@ export default async function Home() {
 
 	return (
 		<>
+			<div className="mt-96 lg:hidden"></div>
 			{/* <-- ==== Hero Section Start ==== --> */}
 			<div className="w-full h-screen">
 				<HeroCarousel banners={formattedBanners} />

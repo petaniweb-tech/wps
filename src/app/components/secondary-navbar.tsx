@@ -11,7 +11,7 @@ import {
 } from "../../utils/navbarutils";
 
 // Import Components //
-import LocaleSwitcher from "./locale-switcher";
+import { LocaleSwitcherDesktop } from "./locale-switcher";
 
 // Import Icons //
 import { ChevronDownIcon } from "@radix-ui/react-icons";
@@ -75,7 +75,7 @@ function SecondaryNavbar() {
 						)}
 					</div>
 				))}
-				<LocaleSwitcher
+				<LocaleSwitcherDesktop
 					menuColor="text-neutral-600"
 					menuHover="text-black"
 					dropdownColor="text-neutral-600"

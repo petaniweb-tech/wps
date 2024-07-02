@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
 import { useLocale } from "next-intl";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
@@ -20,12 +19,49 @@ interface LocaleSwitcherProps {
 	dropdownHover: string;
 }
 
-export default function LocaleSwitcher({
+export const LocaleSwitcherMobile: React.FC = () => {
+	const locale = useLocale();
+	const router = useRouter();
+
+	const handleLocaleChange = (value: string) => {
+		router.replace(`/${value}`);
+	};
+
+	return (
+		<div className="flex items-center justify-center gap-3">
+			<Image
+				src={locale === "id" ? idflag : enflag}
+				alt={locale.toUpperCase()}
+				priority={true}
+				className="h-4 w-5"
+			/>
+			<div className="flex items-center justify-center gap-3">
+				<div
+					onClick={() => handleLocaleChange("id")}
+					className={`text-lg leading-none ${locale === "id" ? "text-white font-bold" : "text-white"}`}
+				>
+					ID
+				</div>
+
+				<div className="w-[1px] h-5 bg-white"></div>
+
+				<div
+					onClick={() => handleLocaleChange("en")}
+					className={`text-lg leading-none ${locale === "en" ? "text-white font-bold" : "text-white"}`}
+				>
+					EN
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export const LocaleSwitcherDesktop: React.FC<LocaleSwitcherProps> = ({
 	menuColor,
 	menuHover,
 	dropdownColor,
 	dropdownHover,
-}: LocaleSwitcherProps) {
+}) => {
 	const [isPending, startTransition] = useTransition();
 	const router = useRouter();
 	const locale = useLocale();
@@ -120,4 +156,29 @@ export default function LocaleSwitcher({
 			)}
 		</div>
 	);
-}
+};
+
+const LocaleSwitcher: React.FC<LocaleSwitcherProps> = (props) => {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth <= 768);
+		};
+
+		handleResize(); // Check initial screen size
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+	return isMobile ? (
+		<LocaleSwitcherMobile />
+	) : (
+		<LocaleSwitcherDesktop {...props} />
+	);
+};
+
+export default LocaleSwitcher;

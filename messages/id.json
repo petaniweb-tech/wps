@@ -55,8 +55,7 @@
 		"tonnage": "TONASE",
 		"length": "Panjang",
 		"width": "Lebar",
-		"height": "Tinggi",
-		"load": "Muatan max"
+		"height": "Tinggi"
 	},
 
 	"BusPage": {

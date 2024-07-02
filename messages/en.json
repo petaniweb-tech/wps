@@ -55,8 +55,7 @@
 		"tonnage": "TONNAGE",
 		"length": "Length",
 		"width": "Width",
-		"height": "Height",
-		"load": "Max load"
+		"height": "Height"
 	},
 
 	"BusPage": {

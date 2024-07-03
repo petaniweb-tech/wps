@@ -11,10 +11,10 @@ export default function TentangKami() {
 	const trTentangkami = useTranslations("TentangkamiPage");
 
 	return (
-		<section className="w-full px-sectionpxlg 2xl:px-sectionpx2xl pt-48 pb-44">
-			<div className="flex justify-between items-center">
+		<section className="w-full px-sectionpxsm lg:px-sectionpxlg 2xl:px-sectionpx2xl pt-36 lg:pt-52 pb-44">
+			<div className="flex flex-col lg:flex-row justify-between items-center">
 				{/* <-- === Left Content Start === --> */}
-				<div className="w-full flex flex-col pr-20 animate-fadeinup">
+				<div className="w-full flex flex-col lg:pr-20 animate-fadeinup">
 					<h3
 						className="text-[21px] leading-normal text-primary font-light"
 						dangerouslySetInnerHTML={{
@@ -22,7 +22,7 @@ export default function TentangKami() {
 						}}
 					></h3>
 					<p
-						className="text-sm text-black mt-10 leading-relaxed font-light"
+						className="text-sm text-black mt-10 leading-[1.7] lg:leading-relaxed font-light"
 						dangerouslySetInnerHTML={{
 							__html: trTentangkami.raw("description"),
 						}}
@@ -31,9 +31,9 @@ export default function TentangKami() {
 				{/* <-- === Left Content End === --> */}
 
 				{/* <-- === Right Content Start === --> */}
-				<div className="w-full basis-5/6 border-l border-black">
+				<div className="w-full lg:basis-5/6 lg:border-l lg:border-black mt-[52px] lg:mt-0">
 					<div className="flex flex-col">
-						<div className="flex items-start gap-6 justify-center pl-8 py-11 border-b border-black">
+						<div className="flex items-start gap-6 justify-center lg:pl-8 py-9 lg:py-11 border-t lg:border-t-0 lg:border-b border-black">
 							<Image
 								src={vision}
 								alt="Vision Icon"
@@ -55,7 +55,7 @@ export default function TentangKami() {
 							</div>
 						</div>
 
-						<div className="flex items-start gap-6 justify-center pl-8 py-11">
+						<div className="flex items-start gap-6 justify-center lg:pl-8 py-9 lg:py-11 border-t lg:border-0 border-black">
 							<Image
 								src={mission}
 								alt="Mission Icon"

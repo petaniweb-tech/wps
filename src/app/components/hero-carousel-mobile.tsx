@@ -112,7 +112,7 @@ export default function HeroCarouselMobile({ banners }: HeroCarouselProps) {
 
 			<div className="absolute z-40 w-full inset-0 flex flex-col justify-end">
 				<div
-					className="w-full py-8 flex flex-col px-sectionpxsm items-start gap-3 h-[44%] relative"
+					className="w-full py-8 flex flex-col px-sectionpxsm items-start gap-3 h-[43%] relative"
 					style={{
 						backgroundColor: `${heroColor}`,
 					}}
@@ -128,7 +128,7 @@ export default function HeroCarouselMobile({ banners }: HeroCarouselProps) {
 					</p>
 
 					<div className="absolute bottom-0 left-0 w-full flex px-sectionpxsm">
-						<div className="w-full flex items-center bg-white h-[1px] bg-opacity-70 mb-10">
+						<div className="w-full flex items-center bg-white h-[1px] bg-opacity-70 mb-9">
 							<div className="flex w-full">
 								{banners.map((_, index) => (
 									<div

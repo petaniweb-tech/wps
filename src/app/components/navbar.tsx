@@ -59,6 +59,11 @@ function Navbar() {
 		});
 	};
 
+	// Close menu when navigating //
+	const closeMenu = () => {
+		setOpen(false);
+	};
+
 	const toggleDropdown = (index: number) => {
 		setDropdownOpen((prev) => {
 			const newDropdownState = [...prev];
@@ -91,18 +96,14 @@ function Navbar() {
 						isOpen
 							? "bg-transparent"
 							: "bg-black bg-opacity-40 backdrop-blur-lg"
-					}
-                    
-                    `}
+					}`}
 				>
 					{!isOpen && (
 						<Link href="/">
 							<div
 								className={`w-fit h-fit pt-1 block transition-all duration-300 ${
 									isOpen ? "opacity-0" : "opacity-100"
-								}
-                                
-                                `}
+								}`}
 							>
 								<Image
 									src={whitelogo}
@@ -119,9 +120,7 @@ function Navbar() {
 					<div
 						className={`transition-all duration-300 ${
 							isOpen ? "opacity-100" : "opacity-0"
-						}
-                    
-                    `}
+						}`}
 					>
 						{isOpen && <LocaleSwitcherMobile />}
 					</div>
@@ -149,8 +148,7 @@ function Navbar() {
 				isOpen
 					? "top-0 left-0 transition-all duration-500 ease-in-out"
 					: "-top-full left-0 -translate-y-28 transition-all duration-500 ease-in-out"
-			}
-            `}
+			}`}
 			>
 				<div className="w-full flex flex-col h-full bg-primary px-sectionpxsm pt-36 pb-24 justify-between items-start">
 					<div className="flex flex-col w-full gap-6">
@@ -161,12 +159,12 @@ function Navbar() {
 									dropdownOpen[i] ? "mb-6" : ""
 								}`}
 							>
-								<div
-									onClick={() => toggleDropdown(i)}
-									className="flex text-lg items-center gap-3 text-white"
-								>
-									<div>{d.label}</div>
-									{d.children && (
+								{d.children ? (
+									<div
+										onClick={() => toggleDropdown(i)}
+										className="flex text-lg items-center gap-3 text-white cursor-pointer"
+									>
+										<div>{d.label}</div>
 										<TriangleDownIcon
 											className={`w-5 h-5 transition-transform ${
 												dropdownOpen[i]
@@ -174,8 +172,17 @@ function Navbar() {
 													: ""
 											}`}
 										/>
-									)}
-								</div>
+									</div>
+								) : (
+									<Link
+										href={d.link ?? "#"}
+										onClick={closeMenu}
+									>
+										<div className="flex text-lg items-center gap-3 text-white">
+											<div>{d.label}</div>
+										</div>
+									</Link>
+								)}
 								{d.children && (
 									<div
 										ref={(el) => {
@@ -189,7 +196,11 @@ function Navbar() {
 										}}
 									>
 										{d.children.map((ch, j) => (
-											<Link key={j} href={ch.link}>
+											<Link
+												key={j}
+												href={ch.link}
+												onClick={closeMenu}
+											>
 												<div className="pb-[10px] text-sm border-b-[1px] border-white border-opacity-80 text-white">
 													{ch.label}
 												</div>

@@ -78,7 +78,9 @@ export default async function Home() {
 
 			<RouteSection />
 
-			<GaleriSection galleries={formattedGalleries} />
+			<div className="hidden lg:block">
+				<GaleriSection galleries={formattedGalleries} />
+			</div>
 		</>
 	);
 }

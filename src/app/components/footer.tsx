@@ -20,7 +20,9 @@ export default function Footer() {
 						className="h-7 w-auto"
 					/>
 
-					<div className="flex flex-col items-start gap-5 border-l border-white pl-8">
+					<div className="block h-auto w-[1px] bg-white self-stretch"></div>
+
+					<div className="flex flex-col items-start gap-5">
 						<div className="flex items-center justify-center gap-6">
 							<Image
 								src={whatsapp}

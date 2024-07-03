@@ -11,7 +11,7 @@ export default function TentangKami() {
 	const trTentangkami = useTranslations("TentangkamiPage");
 
 	return (
-		<section className="w-full px-sectionpxsm lg:px-sectionpxlg 2xl:px-sectionpx2xl pt-36 lg:pt-52 pb-44">
+		<section className="w-full px-sectionpxsm lg:px-sectionpxlg 2xl:px-sectionpx2xl pt-36 lg:pt-52 pb-16 lg:pb-44">
 			<div className="flex flex-col lg:flex-row justify-between items-center">
 				{/* <-- === Left Content Start === --> */}
 				<div className="w-full flex flex-col lg:pr-20 animate-fadeinup">

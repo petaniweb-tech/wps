@@ -29,7 +29,7 @@ export default function GaleriSection({ galleries }: GaleriSectionProps) {
 	return (
 		<div>
 			{/* <-- ==== Galeri Section Start ==== --> */}
-			<section className="lg:px-sectionpxlg 2xl:px-sectionpx2xl lg:pt-52 lg:pb-44">
+			<section className="lg:px-sectionpxlg 2xl:px-sectionpx2xl lg:pt-52 pb-32 lg:pb-44">
 				<div className="flex justify-center">
 					<div className="flex w-fit lg:border-b-[6px] lg:px-24 lg:pb-[14px] border-primary">
 						<h1 className="lg:text-3xl font-semibold text-center">

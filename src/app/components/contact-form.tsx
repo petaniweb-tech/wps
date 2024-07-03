@@ -16,6 +16,7 @@ interface ContactFormProps {
 		emailPlaceholder: string;
 		phonePlaceholder: string;
 		messagePlaceholder: string;
+		submitMobile: string;
 		submit: string;
 		toastSuccess: string;
 		toastError: string;
@@ -54,85 +55,169 @@ export default function ContactForm({ translations }: ContactFormProps) {
 	};
 
 	return (
-		<section className="flex flex-col bg-white w-[48%] h-auto px-8 pt-[26px] pb-8">
-			<div className="flex w-fit border-b-[5px] pr-20 lg:pb-[14px] border-primary">
-				<h1 className="lg:text-2xl font-semibold text-center">
-					{translations.formName}
-				</h1>
-			</div>
-			{/* <-- === Form Start === --> */}
-			<form
-				onSubmit={handleSubmit(processForm)}
-				className="flex flex-col w-full mt-8 gap-5"
-			>
-				{/* <-- == Name Start == --> */}
-				<div>
-					<input
-						type="text"
-						placeholder={translations.namePlaceholder}
-						autoComplete="off"
-						required
-						{...register("name")}
-						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
-					/>
-					{errors.name?.message && (
-						<p className="ml-1 mt-1 text-sm text-red-400">
-							{errors.name.message}
-						</p>
-					)}
-				</div>
-				{/* <-- == Name End == --> */}
-
-				{/* <-- == Email Start == --> */}
-				<div>
-					<input
-						type="email"
-						placeholder={translations.emailPlaceholder}
-						autoComplete="off"
-						required
-						{...register("email")}
-						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
-					/>
-					{errors.email?.message && (
-						<p className="ml-1 mt-1 text-sm text-red-400">
-							{errors.email.message}
-						</p>
-					)}
-				</div>
-				{/* <-- == Email End == --> */}
-
-				{/* <-- == Phone Start == --> */}
-				<div>
-					<input
-						type="tel"
-						placeholder={translations.phonePlaceholder}
-						autoComplete="off"
-						{...register("phone")}
-						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
-					/>
-				</div>
-				{/* <-- == Phone End == --> */}
-
-				{/* <-- == Message Start == --> */}
-				<div>
-					<textarea
-						placeholder={translations.messagePlaceholder}
-						autoComplete="off"
-						rows={6}
-						{...register("message")}
-						className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
-					/>
-				</div>
-				{/* <-- == Message End == --> */}
-
-				<button
-					type="submit"
-					className="w-full bg-primary px-4 pt-3 pb-4 text-base text-white hover:bg-[#3787C8] duration-300"
+		<>
+			{/* <-- ==== Hubungi Kami Mobile Start ==== --> */}
+			<section className="block lg:hidden w-full h-auto">
+				{/* <-- === Form Start === --> */}
+				<form
+					onSubmit={handleSubmit(processForm)}
+					className="flex flex-col w-full gap-4"
 				>
-					{translations.submit}
-				</button>
-			</form>
-			{/* <-- === Form End === --> */}
-		</section>
+					{/* <-- == Name Start == --> */}
+					<div>
+						<input
+							type="text"
+							placeholder={translations.namePlaceholder}
+							autoComplete="off"
+							required
+							{...register("name")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-primary focus:outline-primary"
+						/>
+						{errors.name?.message && (
+							<p className="ml-1 mt-1 text-sm text-red-400">
+								{errors.name.message}
+							</p>
+						)}
+					</div>
+					{/* <-- == Name End == --> */}
+
+					{/* <-- == Email Start == --> */}
+					<div>
+						<input
+							type="email"
+							placeholder={translations.emailPlaceholder}
+							autoComplete="off"
+							required
+							{...register("email")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-primary focus:outline-primary"
+						/>
+						{errors.email?.message && (
+							<p className="ml-1 mt-1 text-sm text-red-400">
+								{errors.email.message}
+							</p>
+						)}
+					</div>
+					{/* <-- == Email End == --> */}
+
+					{/* <-- == Phone Start == --> */}
+					<div>
+						<input
+							type="tel"
+							placeholder={translations.phonePlaceholder}
+							autoComplete="off"
+							{...register("phone")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-primary focus:outline-primary"
+						/>
+					</div>
+					{/* <-- == Phone End == --> */}
+
+					{/* <-- == Message Start == --> */}
+					<div>
+						<textarea
+							placeholder={translations.messagePlaceholder}
+							autoComplete="off"
+							rows={7}
+							{...register("message")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-primary focus:outline-primary"
+						/>
+					</div>
+					{/* <-- == Message End == --> */}
+
+					<div className="flex items-center justify-start w-full">
+						<button
+							type="submit"
+							className="w-fit bg-primary px-10 pt-3 pb-[14px] text-base text-white"
+						>
+							{translations.submitMobile}
+						</button>
+					</div>
+				</form>
+				{/* <-- === Form End === --> */}
+			</section>
+			{/* <-- ==== Hubungi Kami Mobile End ==== --> */}
+
+			{/* <-- ==== Contact Form Desktop Start ==== --> */}
+			<section className="hidden lg:flex flex-col bg-white w-[48%] h-auto px-8 pt-[26px] pb-8">
+				<div className="flex w-fit border-b-[5px] pr-20 lg:pb-[14px] border-primary">
+					<h1 className="lg:text-2xl font-semibold text-center">
+						{translations.formName}
+					</h1>
+				</div>
+				{/* <-- === Form Start === --> */}
+				<form
+					onSubmit={handleSubmit(processForm)}
+					className="flex flex-col w-full mt-8 gap-5"
+				>
+					{/* <-- == Name Start == --> */}
+					<div>
+						<input
+							type="text"
+							placeholder={translations.namePlaceholder}
+							autoComplete="off"
+							required
+							{...register("name")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
+						/>
+						{errors.name?.message && (
+							<p className="ml-1 mt-1 text-sm text-red-400">
+								{errors.name.message}
+							</p>
+						)}
+					</div>
+					{/* <-- == Name End == --> */}
+
+					{/* <-- == Email Start == --> */}
+					<div>
+						<input
+							type="email"
+							placeholder={translations.emailPlaceholder}
+							autoComplete="off"
+							required
+							{...register("email")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
+						/>
+						{errors.email?.message && (
+							<p className="ml-1 mt-1 text-sm text-red-400">
+								{errors.email.message}
+							</p>
+						)}
+					</div>
+					{/* <-- == Email End == --> */}
+
+					{/* <-- == Phone Start == --> */}
+					<div>
+						<input
+							type="tel"
+							placeholder={translations.phonePlaceholder}
+							autoComplete="off"
+							{...register("phone")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
+						/>
+					</div>
+					{/* <-- == Phone End == --> */}
+
+					{/* <-- == Message Start == --> */}
+					<div>
+						<textarea
+							placeholder={translations.messagePlaceholder}
+							autoComplete="off"
+							rows={6}
+							{...register("message")}
+							className="w-full px-4 pt-[11px] pb-[13px] bg-inherit placeholder-[#aaaaaa] text-black text-base border border-[#aaaaaa] focus:outline-primary"
+						/>
+					</div>
+					{/* <-- == Message End == --> */}
+
+					<button
+						type="submit"
+						className="w-full bg-primary px-4 pt-3 pb-4 text-base text-white hover:bg-[#3787C8] duration-300"
+					>
+						{translations.submit}
+					</button>
+				</form>
+				{/* <-- === Form End === --> */}
+			</section>
+			{/* <-- ==== Contact Form Desktop End ==== --> */}
+		</>
 	);
 }

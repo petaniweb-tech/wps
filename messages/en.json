@@ -41,11 +41,13 @@
 	},
 
 	"HubungikamiPage": {
+		"headline": "CONTACT US",
 		"formName": "CONTACT US",
 		"namePlaceholder": "Name",
 		"emailPlaceholder": "Email",
 		"phonePlaceholder": "Phone Number",
 		"messagePlaceholder": "Your message",
+		"submitMobile": "SEND",
 		"submit": "Send message",
 		"toastSuccess": "Your message has been sent!",
 		"toastError": "Something went wrong"
@@ -69,5 +71,9 @@
 		"facilities1": "Blanket, Pillow",
 		"facilities2": "Karaoke, Smart TV",
 		"facilities3": "(Netflix, etc), Cold AC"
+	},
+
+	"ContactPage": {
+		"headline": "CONTACT US"
 	}
 }

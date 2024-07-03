@@ -214,7 +214,9 @@ function Navbar() {
 
 					<div className="flex w-full items-center justify-between pt-[22px] border-t-[1px] border-white border-opacity-80">
 						<div className="w-fit">
-							<p className="text-sm text-white">Hubungi kami</p>
+							<p className="text-sm text-white">
+								{trNavbar("socials")}
+							</p>
 						</div>
 						<div className="flex items-center justify-center gap-4">
 							<Image

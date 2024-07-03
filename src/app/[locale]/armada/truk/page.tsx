@@ -50,7 +50,7 @@ export default function Truk() {
 						<div className="w-full flex flex-col">
 							<div className="w-full flex items-center justify-between pt-1 pb-[14px] border-b border-black">
 								<p className="text-base text-black text-left">
-									{trTrukPage("tonnage")}
+									{trTrukPage("tonnageMobile")}
 								</p>
 								<p className="text-base text-black text-right">
 									Max 31T
@@ -58,7 +58,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px] border-b border-black">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("length")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -67,7 +67,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px] border-b border-black">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("width")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -76,7 +76,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px]">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("height")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -112,7 +112,7 @@ export default function Truk() {
 						<div className="w-full flex flex-col">
 							<div className="w-full flex items-center justify-between pt-1 pb-[14px] border-b border-black">
 								<p className="text-base text-black text-left">
-									{trTrukPage("tonnage")}
+									{trTrukPage("tonnageMobile")}
 								</p>
 								<p className="text-base text-black text-right">
 									20T - 28T
@@ -120,7 +120,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px] border-b border-black">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("length")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -129,7 +129,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px] border-b border-black">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("width")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -138,7 +138,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px]">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("height")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -174,7 +174,7 @@ export default function Truk() {
 						<div className="w-full flex flex-col">
 							<div className="w-full flex items-center justify-between pt-1 pb-[14px] border-b border-black">
 								<p className="text-base text-black text-left">
-									{trTrukPage("tonnage")}
+									{trTrukPage("tonnageMobile")}
 								</p>
 								<p className="text-base text-black text-right">
 									Max 55T
@@ -182,7 +182,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px] border-b border-black">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("length")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -191,7 +191,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px] border-b border-black">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("width")}
 								</p>
 								<p className="text-base text-black text-right">
@@ -200,7 +200,7 @@ export default function Truk() {
 							</div>
 
 							<div className="w-full flex items-center justify-between py-[14px]">
-								<p className="text-base text-black text-left uppercase">
+								<p className="text-base text-black text-left">
 									{trTrukPage("height")}
 								</p>
 								<p className="text-base text-black text-right">

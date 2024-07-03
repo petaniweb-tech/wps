@@ -53,6 +53,7 @@
 
 	"TrukPage": {
 		"headline": "ARMADA TRUK",
+		"tonnageMobile": "Tonase",
 		"tonnage": "TONASE",
 		"length": "Panjang",
 		"width": "Lebar",

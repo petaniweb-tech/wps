@@ -53,6 +53,7 @@
 
 	"TrukPage": {
 		"headline": "TRUCK FLEET",
+		"tonnageMobile": "Tonnage",
 		"tonnage": "TONNAGE",
 		"length": "Length",
 		"width": "Width",

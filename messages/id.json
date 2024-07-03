@@ -41,11 +41,13 @@
 	},
 
 	"HubungikamiPage": {
+		"headline": "HUBUNGI KAMI",
 		"formName": "HUBUNGI KAMI",
 		"namePlaceholder": "Nama",
 		"emailPlaceholder": "Email",
 		"phonePlaceholder": "Nomor Telepon",
 		"messagePlaceholder": "Pesan Anda",
+		"submitMobile": "KIRIM",
 		"submit": "Kirim pesan",
 		"toastSuccess": "Pesan anda telah terkirim!",
 		"toastError": "Terdapat kesalahan"
@@ -69,5 +71,9 @@
 		"facilities1": "Selimut, Bantal",
 		"facilities2": "Karaoke, Smart TV",
 		"facilities3": "(Netflix, dll), AC Dingin"
+	},
+
+	"ContactPage": {
+		"headline": "HUBUNGI KAMI"
 	}
 }

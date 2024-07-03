@@ -12,6 +12,7 @@ export default function ContactFormWrapper() {
 		phonePlaceholder: trHubungikamiPage("phonePlaceholder"),
 		messagePlaceholder: trHubungikamiPage("messagePlaceholder"),
 		submit: trHubungikamiPage("submit"),
+		submitMobile: trHubungikamiPage("submitMobile"),
 		toastSuccess: trHubungikamiPage("toastSuccess"),
 		toastError: trHubungikamiPage("toastError"),
 	};

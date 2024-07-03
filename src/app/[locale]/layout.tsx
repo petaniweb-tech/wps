@@ -4,7 +4,7 @@ import "./globals.css";
 
 // Import Components //
 import { NextIntlClientProvider } from "next-intl";
-import ConditionalNavbar from "../components/conditional-navbar";
+import NavbarWrapper from "../components/navbar-wrapper";
 import Footer from "../components/footer";
 import { Toaster } from "../components/ui/toaster";
 
@@ -40,7 +40,7 @@ export default function RootLayout({
 		<html lang={locale} className={`scroll-smooth ${inter.className}`}>
 			<body className="bg-white">
 				<NextIntlClientProvider locale={locale} messages={messages}>
-					<ConditionalNavbar />
+					<NavbarWrapper />
 					{children}
 					<Toaster />
 					<Footer />

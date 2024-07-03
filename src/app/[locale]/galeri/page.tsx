@@ -5,6 +5,7 @@ import { sanityFetch } from "../../../../sanity/lib/client";
 import { urlForImage } from "../../../../sanity/lib/image";
 
 // Import Components //
+import GaleriPage from "@/app/components/sections/galeri-page";
 import GaleriCarousel from "@/app/components/galeri-carousel";
 
 export const runtime = "edge";
@@ -31,8 +32,18 @@ export default async function Galeri() {
 	});
 
 	return (
-		<section className="w-full px-sectionpxlg 2xl:px-sectionpx2xl pt-40 pb-44">
-			<GaleriCarousel galleries={formattedGalleries} />
-		</section>
+		<>
+			{/* <-- ==== Galeri Mobile Start ==== --> */}
+			<section className="block lg:hidden w-full">
+				<GaleriPage galleries={formattedGalleries} />
+			</section>
+			{/* <-- ==== Galeri Mobile End ==== --> */}
+
+			{/* <-- ==== Galeri Desktop Start ==== --> */}
+			<section className="hidden lg:block w-full px-sectionpxlg 2xl:px-sectionpx2xl pt-40 pb-44">
+				<GaleriCarousel galleries={formattedGalleries} />
+			</section>
+			{/* <-- ==== Galeri Desktop End ==== --> */}
+		</>
 	);
 }

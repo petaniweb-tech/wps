@@ -22,9 +22,15 @@ interface LocaleSwitcherProps {
 export const LocaleSwitcherMobile: React.FC = () => {
 	const locale = useLocale();
 	const router = useRouter();
+	const pathname = usePathname();
+	const searchParams = useSearchParams();
 
 	const handleLocaleChange = (value: string) => {
-		router.replace(`/${value}`);
+		const newPath = `/${value}${pathname.replace(`/${locale}`, "")}`;
+		const newQuery = searchParams.toString();
+		const newUrl = newQuery ? `${newPath}?${newQuery}` : newPath;
+
+		router.replace(newUrl);
 	};
 
 	return (

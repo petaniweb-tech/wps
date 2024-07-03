@@ -60,9 +60,12 @@
 	},
 
 	"BusPage": {
+		"headline": "BUS FLEET",
+		"totalSeatMobile": "Total Seat",
 		"totalSeat": "TOTAL SEAT",
+		"facilitiesMobile": "Facilities",
 		"facilities": "FACILITIES",
-		"facilities1": "Blanket, Pillow,",
+		"facilities1": "Blanket, Pillow",
 		"facilities2": "Karaoke, Smart TV",
 		"facilities3": "(Netflix, etc), Cold AC"
 	}

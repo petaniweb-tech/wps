@@ -60,9 +60,12 @@
 	},
 
 	"BusPage": {
+		"headline": "ARMADA BUS",
+		"totalSeatMobile": "Jumlah Seat",
 		"totalSeat": "JUMLAH SEAT",
+		"facilitiesMobile": "Fasilitas",
 		"facilities": "FASILITAS",
-		"facilities1": "Selimut, Bantal,",
+		"facilities1": "Selimut, Bantal",
 		"facilities2": "Karaoke, Smart TV",
 		"facilities3": "(Netflix, dll), AC Dingin"
 	}

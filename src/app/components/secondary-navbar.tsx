@@ -26,6 +26,7 @@ import {
 import coloredlogo from "../../../assets/images/img-colored-logo.webp";
 import whatsapp from "../../../assets/icons/icon-whatsapp.png";
 import tiktok from "../../../assets/icons/icon-tiktok.png";
+import instagram from "../../../assets/icons/icon-instagram.png";
 import email from "../../../assets/icons/icon-email.png";
 
 function SecondaryNavbar() {
@@ -213,26 +214,49 @@ function SecondaryNavbar() {
 							</p>
 						</div>
 						<div className="flex items-center justify-center gap-4">
-							<Image
-								src={whatsapp}
-								alt="WhatsApp"
-								priority={true}
-								className="h-6 w-auto"
-							/>
+							<Link href="https://wa.me/6282132514522">
+								<Image
+									src={whatsapp}
+									alt="WhatsApp"
+									priority={true}
+									className="h-6 w-auto"
+								/>
+							</Link>
 
-							<Image
-								src={tiktok}
-								alt="TikTok"
-								priority={true}
-								className="h-6 w-auto"
-							/>
+							<Link
+								href="https://www.tiktok.com/@wijayaputrabus"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Image
+									src={tiktok}
+									alt="TikTok"
+									priority={true}
+									className="h-6 w-auto"
+								/>
+							</Link>
 
-							<Image
-								src={email}
-								alt="Email"
-								priority={true}
-								className="h-6 w-auto"
-							/>
+							<Link
+								href="https://www.instagram.com/official_wijayaputra"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Image
+									src={instagram}
+									alt="Instagram"
+									priority={true}
+									className="h-6 w-auto"
+								/>
+							</Link>
+
+							<Link href="mailto:wp.trans@yahoo.com">
+								<Image
+									src={email}
+									alt="Email"
+									priority={true}
+									className="h-6 w-auto"
+								/>
+							</Link>
 						</div>
 					</div>
 				</div>

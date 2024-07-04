@@ -64,7 +64,10 @@ export default function RouteSection() {
 					</div>
 				</div>
 
-				<div className="w-full mt-9">
+				<div className="w-full flex flex-col mt-10 gap-5">
+					<h3 className="text-3xl text-black font-semibold leading-[1.4]">
+						{trRoute("title")}
+					</h3>
 					<p className="text-base text-black font-light leading-relaxed">
 						{trRoute("description")}
 					</p>

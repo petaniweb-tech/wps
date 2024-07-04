@@ -5,6 +5,7 @@ import Image from "next/image";
 import whitelogo from "../../../assets/images/img-white-logo.webp";
 import whatsapp from "../../../assets/icons/icon-whatsapp.png";
 import tiktok from "../../../assets/icons/icon-tiktok.png";
+import instagram from "../../../assets/icons/icon-instagram.png";
 import email from "../../../assets/icons/icon-email.png";
 
 export default function Footer() {
@@ -23,99 +24,170 @@ export default function Footer() {
 					<div className="block h-auto w-[1px] bg-white self-stretch"></div>
 
 					<div className="flex flex-col items-start gap-5">
-						<div className="flex items-center justify-center gap-6">
-							<Image
-								src={whatsapp}
-								alt="WhatsApp"
-								priority={true}
-								className="w-[22px] h-auto"
-							/>
-							<p className="text-[15px] leading-none text-white font-extralight">
-								0821 3251 4522
-							</p>
-						</div>
+						<Link href="https://wa.me/6282132514522">
+							<div className="flex items-center justify-center gap-6">
+								<Image
+									src={whatsapp}
+									alt="WhatsApp"
+									priority={true}
+									className="w-[22px] h-auto"
+								/>
+								<p className="text-[15px] leading-none text-white font-extralight">
+									0821 3251 4522
+								</p>
+							</div>
+						</Link>
 
-						<div className="flex items-center justify-center gap-6">
-							<Image
-								src={tiktok}
-								alt="TikTok"
-								priority={true}
-								className="w-[22px] h-auto"
-							/>
-							<p className="text-[15px] leading-none text-white font-extralight">
-								@officialwijayaputra
-							</p>
-						</div>
+						<Link
+							href="https://www.tiktok.com/@wijayaputrabus"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div className="flex items-center justify-center gap-6">
+								<Image
+									src={tiktok}
+									alt="TikTok"
+									priority={true}
+									className="w-[22px] h-auto"
+								/>
+								<p className="text-[15px] leading-none text-white font-extralight">
+									@wijayaputrabus
+								</p>
+							</div>
+						</Link>
 
-						<div className="flex items-center justify-center gap-6">
-							<Image
-								src={email}
-								alt="Email"
-								priority={true}
-								className="w-[22px] h-auto"
-							/>
-							<p className="text-[15px] leading-none text-white font-extralight">
-								wp.trans@yahoo.com
-							</p>
-						</div>
+						<Link
+							href="https://www.instagram.com/official_wijayaputra"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div className="flex items-center justify-center gap-6">
+								<Image
+									src={instagram}
+									alt="Instagram"
+									priority={true}
+									className="w-[22px] h-auto"
+								/>
+								<p className="text-[15px] leading-none text-white font-extralight">
+									official_wijayaputra
+								</p>
+							</div>
+						</Link>
+
+						<Link href="mailto:wp.trans@yahoo.com">
+							<div className="flex items-center justify-center gap-6">
+								<Image
+									src={email}
+									alt="Email"
+									priority={true}
+									className="w-[22px] h-auto"
+								/>
+								<p className="text-[15px] leading-none text-white font-extralight">
+									wp.trans@yahoo.com
+								</p>
+							</div>
+						</Link>
 					</div>
 				</div>
 			</footer>
 			{/* <-- ==== Footer Mobile End ==== --> */}
 
 			{/* <-- ==== Footer Desktop Start ==== --> */}
-			<footer className="hidden lg:block w-full lg:px-sectionpxlg 2xl:px-sectionpx2xl lg:py-20 bg-primary">
-				<div className="flex lg:justify-center lg:px-6">
-					<div className="flex items-center lg:gap-6 w-full justify-center lg:py-2">
-						<Image
-							src={whatsapp}
-							alt="Whatsapp"
-							priority={true}
-							className="lg:h-12 w-auto"
-						/>
-						<div className="flex flex-col items-start gap-1">
-							<h5 className="lg:text-xl text-white font-medium">
-								WHATSAPP
-							</h5>
-							<p className="lg:text-sm text-white font-light">
-								0821 3251 4522
-							</p>
+			<footer className="hidden lg:block w-full px-sectionpxlg 2xl:px-sectionpx2xl py-20 bg-primary">
+				<div className="flex w-full items-center justify-between">
+					<Link
+						href="https://wa.me/6282132514522"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="flex items-center gap-6 w-full justify-center py-2">
+							<Image
+								src={whatsapp}
+								alt="WhatsApp"
+								priority={true}
+								className="h-12 w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-xl text-white font-medium">
+									WHATSAPP
+								</h5>
+								<p className="text-sm text-white font-light">
+									0821 3251 4522
+								</p>
+							</div>
 						</div>
-					</div>
+					</Link>
 
-					<div className="flex items-center lg:gap-6 w-full justify-center lg:py-2 border-x-[1px] border-white">
-						<Image
-							src={tiktok}
-							alt="Whatsapp"
-							priority={true}
-							className="lg:h-12 w-auto"
-						/>
-						<div className="flex flex-col items-start gap-1">
-							<h5 className="lg:text-xl text-white font-medium">
-								TIKTOK
-							</h5>
-							<p className="lg:text-sm text-white font-light">
-								@officialwijayaputra
-							</p>
-						</div>
-					</div>
+					<div className="block h-auto w-[1px] bg-white self-stretch"></div>
 
-					<div className="flex items-center lg:gap-6 w-full justify-center lg:py-2">
-						<Image
-							src={email}
-							alt="Whatsapp"
-							priority={true}
-							className="lg:h-12 w-auto"
-						/>
-						<div className="flex flex-col items-start gap-1">
-							<h5 className="lg:text-xl text-white font-medium">
-								EMAIL
-							</h5>
-							<p className="lg:text-sm text-white font-light">
-								wp.trans@yahoo.com
-							</p>
+					<Link
+						href="https://www.tiktok.com/@wijayaputrabus"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="flex items-center gap-6 w-full justify-center py-2">
+							<Image
+								src={tiktok}
+								alt="TikTok"
+								priority={true}
+								className="h-12 w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-xl text-white font-medium">
+									TIKTOK
+								</h5>
+								<p className="text-sm text-white font-light">
+									@wijayaputrabus
+								</p>
+							</div>
 						</div>
-					</div>
+					</Link>
+
+					<div className="block h-auto w-[1px] bg-white self-stretch"></div>
+
+					<Link
+						href="https://www.instagram.com/official_wijayaputra"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="flex items-center gap-6 w-full justify-center py-2">
+							<Image
+								src={instagram}
+								alt="Instagram"
+								priority={true}
+								className="h-12 w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-xl text-white font-medium">
+									INSTAGRAM
+								</h5>
+								<p className="text-sm text-white font-light">
+									official_wijayaputra
+								</p>
+							</div>
+						</div>
+					</Link>
+
+					<div className="block h-auto w-[1px] bg-white self-stretch"></div>
+
+					<Link href="mailto:wp.trans@yahoo.com">
+						<div className="flex items-center gap-6 w-full justify-center py-2">
+							<Image
+								src={email}
+								alt="Email"
+								priority={true}
+								className="h-12 w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-xl text-white font-medium">
+									EMAIL
+								</h5>
+								<p className="text-sm text-white font-light">
+									wp.trans@yahoo.com
+								</p>
+							</div>
+						</div>
+					</Link>
 				</div>
 			</footer>
 			{/* <-- ==== Footer Desktop End ==== --> */}

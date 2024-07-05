@@ -37,7 +37,7 @@ export const bannerType = defineType({
       name: "video",
       type: "file",
       options: {
-        accept: "video/mp4",
+        accept: "video/*",
       },
     }),
   ],

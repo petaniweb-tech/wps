@@ -29,17 +29,17 @@ export async function sendEmail(data: ContactFormInputs) {
 		const { name, email, phone, message } = result.data;
 		try {
 			const data = await resend.emails.send({
-				from: "onboarding@resend.dev",
-				to: ["tech@petaniweb.com", "wp.trans@yahoo.com"],
-				subject: "WPS Contact Form",
-				text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\nMessage: ${message}`,
-				react: ContactFormEmail({
-					name,
-					email,
-					phone: phone || "-",
-					message,
-				}),
-			});
+        from: "noreply@petaniweb.com",
+        to: ["wp.trans@yahoo.com", "tech@petaniweb.com"],
+        subject: "WPS Contact Form",
+        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "-"}\nMessage: ${message}`,
+        react: ContactFormEmail({
+          name,
+          email,
+          phone: phone || "-",
+          message,
+        }),
+      });
 			return { success: true, data };
 		} catch (error) {
 			return { success: false, error };

@@ -13,100 +13,112 @@ export default function Footer() {
 		<>
 			{/* <-- ==== Footer Mobile Start ==== --> */}
 			<footer className="block lg:hidden w-full">
-				<div className="flex w-full items-start justify-between bg-primary py-10 gap-10 px-sectionpxsm">
-					<Image
-						src={whitelogo}
-						alt="Wijaya Putra Santoso"
-						priority={true}
-						className="w-28 h-auto"
-					/>
+				<div className="flex w-full items-start justify-between bg-primary px-sectionpxsm py-10 gap-[22px]">
+					<div className="flex w-fit">
+						<Image
+							src={whitelogo}
+							alt="Wijaya Putra Santoso"
+							priority={true}
+							className="w-[100px] h-auto"
+						/>
+					</div>
 
-					<div className="flex flex-col gap-9 w-full items-start pl-10 border-l border-white">
+					<div className="flex-shrink-0 w-[1px] h-auto bg-white self-stretch"></div>
+
+					<div className="flex flex-col flex-1 w-full gap-9">
 						<div className="flex flex-col items-start justify-start gap-5">
+							{/* <-- === WhatsApp Start === --> */}
 							<Link href="https://wa.me/6282132514522">
-								<div className="flex items-center justify-center gap-4">
+								<div className="flex items-center justify-center gap-[14px]">
 									<Image
 										src={whatsapp}
 										alt="WhatsApp"
 										priority={true}
-										className="w-[22px] h-auto"
+										className="w-[18px] h-auto"
 									/>
 									<p className="text-[15px] leading-none text-white font-extralight">
 										0821 3251 4522
 									</p>
 								</div>
 							</Link>
+							{/* <-- === WhatsApp End === --> */}
 
+							{/* <-- === TikTok Start === --> */}
 							<Link
 								href="https://www.tiktok.com/@wijayaputrabus"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<div className="flex items-center justify-center gap-4">
+								<div className="flex items-center justify-center gap-[14px]">
 									<Image
 										src={tiktok}
 										alt="TikTok"
 										priority={true}
-										className="w-[22px] h-auto"
+										className="w-[18px] h-auto"
 									/>
 									<p className="text-[15px] leading-none text-white font-extralight">
 										@wijayaputrabus
 									</p>
 								</div>
 							</Link>
+							{/* <-- === TikTok End === --> */}
 
+							{/* <-- === Instagram Start === --> */}
 							<Link
 								href="https://www.instagram.com/official_wijayaputra"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<div className="flex items-center justify-center gap-4">
+								<div className="flex items-center justify-center gap-[14px]">
 									<Image
 										src={instagram}
 										alt="Instagram"
 										priority={true}
-										className="w-[22px] h-auto"
+										className="w-[18px] h-auto"
 									/>
 									<p className="text-[15px] leading-none text-white font-extralight">
 										official_wijayaputra
 									</p>
 								</div>
 							</Link>
+							{/* <-- === Instagram End === --> */}
 
+							{/* <-- === Email Start === --> */}
 							<Link href="mailto:wp.trans@yahoo.com">
-								<div className="flex items-center justify-center gap-4">
+								<div className="flex items-center justify-center gap-[14px]">
 									<Image
 										src={email}
 										alt="Email"
 										priority={true}
-										className="w-[22px] h-auto"
+										className="w-[18px] h-auto"
 									/>
 									<p className="text-[15px] leading-none text-white font-extralight">
 										wp.trans@yahoo.com
 									</p>
 								</div>
 							</Link>
+							{/* <-- === Email End === --> */}
 						</div>
 
-						<div className="flex flex-col">
-							<h3 className="text-base text-white">LOCATION</h3>
+						<div className="flex flex-col items-start justify-start gap-9">
+							<h3 className="text-lg text-white">LOCATION</h3>
 
-							<div className="flex flex-col mt-9 gap-5">
+							<div className="flex flex-col gap-5">
 								<div className="flex flex-col gap-2">
-									<h5 className="text-sm text-white">
+									<h5 className="text-[15px] text-white">
 										POOL MALANG
 									</h5>
-									<p className="text-xs text-white text-wrap leading-[1.6]">
+									<p className="text-sm text-white text-wrap leading-[1.6]">
 										Jl. Raya Wendit Barat No.7, Krajan,
 										Kabupaten Malang
 									</p>
 								</div>
 
 								<div className="flex flex-col gap-2">
-									<h5 className="text-sm text-white">
+									<h5 className="text-[15px] text-white">
 										POOL TANGERANG
 									</h5>
-									<p className="text-xs text-white text-wrap leading-[1.6]">
+									<p className="text-sm text-white text-wrap leading-[1.6]">
 										Jl. Raya Serang, Kragilan,
 										<br />
 										Kabupaten Serang, Banten

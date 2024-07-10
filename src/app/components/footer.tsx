@@ -13,117 +13,94 @@ export default function Footer() {
 		<>
 			{/* <-- ==== Footer Mobile Start ==== --> */}
 			<footer className="block lg:hidden w-full">
-				<div className="flex w-full items-start justify-between bg-primary px-sectionpxsm py-10 gap-[22px]">
-					<div className="flex w-fit">
+				<div className="flex flex-col bg-primary px-sectionpxsm py-11">
+					<div className="block w-full">
 						<Image
 							src={whitelogo}
 							alt="Wijaya Putra Santoso"
 							priority={true}
-							className="w-[100px] h-auto"
+							className="h-9 w-auto"
 						/>
 					</div>
 
-					<div className="flex-shrink-0 w-[1px] h-auto bg-white self-stretch"></div>
+					<div className="flex flex-col w-full items-start gap-6 mt-11">
+						{/* <-- === WhatsApp Start === --> */}
+						<Link href="https://wa.me/6282132514522">
+							<div className="flex items-center justify-center gap-4">
+								<Image
+									src={whatsapp}
+									alt="WhatsApp"
+									priority={true}
+									className="h-6 w-auto"
+								/>
+								<p className="text-[19px] leading-none text-white font-extralight">
+									0821 3251 4522
+								</p>
+							</div>
+						</Link>
+						{/* <-- === WhatsApp End === --> */}
 
-					<div className="flex flex-col flex-1 w-full gap-9">
-						<div className="flex flex-col items-start justify-start gap-5">
-							{/* <-- === WhatsApp Start === --> */}
-							<Link href="https://wa.me/6282132514522">
-								<div className="flex items-center justify-center gap-[14px]">
-									<Image
-										src={whatsapp}
-										alt="WhatsApp"
-										priority={true}
-										className="w-[18px] h-auto"
-									/>
-									<p className="text-[15px] leading-none text-white font-extralight">
-										0821 3251 4522
-									</p>
-								</div>
-							</Link>
-							{/* <-- === WhatsApp End === --> */}
+						{/* <-- === TikTok Start === --> */}
+						<Link
+							href="https://www.tiktok.com/@wijayaputrabus"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div className="flex items-center justify-center gap-4">
+								<Image
+									src={tiktok}
+									alt="TikTok"
+									priority={true}
+									className="h-6 w-auto"
+								/>
+								<p className="text-[19px] leading-none text-white font-extralight">
+									@wijayaputrabus
+								</p>
+							</div>
+						</Link>
+						{/* <-- === TikTok End === --> */}
 
-							{/* <-- === TikTok Start === --> */}
-							<Link
-								href="https://www.tiktok.com/@wijayaputrabus"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<div className="flex items-center justify-center gap-[14px]">
-									<Image
-										src={tiktok}
-										alt="TikTok"
-										priority={true}
-										className="w-[18px] h-auto"
-									/>
-									<p className="text-[15px] leading-none text-white font-extralight">
-										@wijayaputrabus
-									</p>
-								</div>
-							</Link>
-							{/* <-- === TikTok End === --> */}
+						{/* <-- === Email Start === --> */}
+						<Link href="mailto:wp.trans@yahoo.com">
+							<div className="flex items-center justify-center gap-4">
+								<Image
+									src={email}
+									alt="Email"
+									priority={true}
+									className="h-6 w-auto"
+								/>
+								<p className="text-[19px] leading-none text-white font-extralight">
+									wp.trans@yahoo.com
+								</p>
+							</div>
+						</Link>
+						{/* <-- === Email End === --> */}
+					</div>
 
-							{/* <-- === Instagram Start === --> */}
-							<Link
-								href="https://www.instagram.com/official_wijayaputra"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<div className="flex items-center justify-center gap-[14px]">
-									<Image
-										src={instagram}
-										alt="Instagram"
-										priority={true}
-										className="w-[18px] h-auto"
-									/>
-									<p className="text-[15px] leading-none text-white font-extralight">
-										official_wijayaputra
-									</p>
-								</div>
-							</Link>
-							{/* <-- === Instagram End === --> */}
+					<div className="flex flex-col w-full items-start mt-11 gap-8">
+						<h3 className="text-xl text-white font-semibold">
+							LOCATION
+						</h3>
 
-							{/* <-- === Email Start === --> */}
-							<Link href="mailto:wp.trans@yahoo.com">
-								<div className="flex items-center justify-center gap-[14px]">
-									<Image
-										src={email}
-										alt="Email"
-										priority={true}
-										className="w-[18px] h-auto"
-									/>
-									<p className="text-[15px] leading-none text-white font-extralight">
-										wp.trans@yahoo.com
-									</p>
-								</div>
-							</Link>
-							{/* <-- === Email End === --> */}
-						</div>
+						<div className="flex flex-col gap-7">
+							<div className="flex flex-col gap-2">
+								<h5 className="text-lg text-white">
+									POOL MALANG
+								</h5>
+								<p className="text-[15px] text-white text-wrap leading-[1.6]">
+									Jl. Raya Wendit Barat No.7, Krajan,
+									Kabupaten Malang
+								</p>
+							</div>
 
-						<div className="flex flex-col items-start justify-start gap-9">
-							<h3 className="text-lg text-white">LOCATION</h3>
-
-							<div className="flex flex-col gap-5">
-								<div className="flex flex-col gap-2">
-									<h5 className="text-[15px] text-white">
-										POOL MALANG
-									</h5>
-									<p className="text-sm text-white text-wrap leading-[1.6]">
-										Jl. Raya Wendit Barat No.7, Krajan,
-										Kabupaten Malang
-									</p>
-								</div>
-
-								<div className="flex flex-col gap-2">
-									<h5 className="text-[15px] text-white">
-										POOL TANGERANG
-									</h5>
-									<p className="text-sm text-white text-wrap leading-[1.6]">
-										Jl. Raya Serang, Kragilan,
-										<br />
-										Kabupaten Serang, Banten
-									</p>
-								</div>
+							<div className="flex flex-col gap-2">
+								<h5 className="text-lg text-white">
+									POOL TANGERANG
+								</h5>
+								<p className="text-[15px] text-white text-wrap leading-[1.6]">
+									Jl. Raya Serang, Kragilan, Kabupaten Serang,
+									Banten
+								</p>
 							</div>
 						</div>
 					</div>
@@ -132,7 +109,7 @@ export default function Footer() {
 			{/* <-- ==== Footer Mobile End ==== --> */}
 
 			{/* <-- ==== Footer Desktop Start ==== --> */}
-			<footer className="hidden lg:block w-full px-[70px] 2xl:px-32 py-20 bg-primary">
+			<footer className="hidden lg:block w-full px-sectionpxlg 2xl:px-sectionpx2xl py-20 bg-primary">
 				<div className="flex w-full items-center justify-between">
 					<div className="flex w-fit items-center justify-center gap-11 2xl:gap-12 py-3">
 						{/* <-- === WhatsApp Start === --> */}
@@ -184,31 +161,6 @@ export default function Footer() {
 							</div>
 						</Link>
 						{/* <-- === TikTok End === --> */}
-
-						{/* <-- === Instagram Start === --> */}
-						<Link
-							href="https://www.instagram.com/official_wijayaputra"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<div className="flex w-fit gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
-								<Image
-									src={instagram}
-									alt="Instagram"
-									priority={true}
-									className="h-[38px] w-auto"
-								/>
-								<div className="flex flex-col items-start gap-1">
-									<h5 className="text-sm text-white font-medium text-nowrap">
-										INSTAGRAM
-									</h5>
-									<p className="text-xs text-white font-light text-nowrap">
-										official_wijayaputra
-									</p>
-								</div>
-							</div>
-						</Link>
-						{/* <-- === Instagram End === --> */}
 
 						{/* <-- === Email Start === --> */}
 						<Link href="mailto:wp.trans@yahoo.com">

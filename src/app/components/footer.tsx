@@ -107,104 +107,106 @@ export default function Footer() {
 			{/* <-- ==== Footer Desktop Start ==== --> */}
 			<footer className="hidden lg:block w-full px-sectionpxlg 2xl:px-sectionpx2xl py-20 bg-primary">
 				<div className="flex w-full items-center justify-between">
-					<div className="flex w-fit items-center justify-center gap-[50px] 2xl:gap-12 py-3">
-						{/* <-- === WhatsApp Start === --> */}
-						<Link
-							href="https://wa.me/6282132514522"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<div className="flex w-fit gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
-								<Image
-									src={whatsapp}
-									alt="WhatsApp"
-									priority={true}
-									className="h-[38px] w-auto"
-								/>
-								<div className="flex flex-col items-start gap-1">
-									<h5 className="text-sm text-white font-medium text-nowrap">
-										WHATSAPP
-									</h5>
-									<p className="text-xs text-white font-light text-nowrap">
-										0821 3251 4522
-									</p>
-								</div>
+					{/* <-- === WhatsApp Start === --> */}
+					<Link
+						href="https://wa.me/6282132514522"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="flex w-fit py-[10px] gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
+							<Image
+								src={whatsapp}
+								alt="WhatsApp"
+								priority={true}
+								className="h-[38px] w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-[15px] text-white font-medium text-nowrap">
+									WHATSAPP
+								</h5>
+								<p className="text-xs text-white font-light text-nowrap">
+									0821 3251 4522
+								</p>
 							</div>
-						</Link>
-						{/* <-- === WhatsApp End === --> */}
+						</div>
+					</Link>
+					{/* <-- === WhatsApp End === --> */}
 
-						{/* <-- === TikTok Start === --> */}
-						<Link
-							href="https://www.tiktok.com/@wijayaputrabus"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<div className="flex w-fit gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
-								<Image
-									src={tiktok}
-									alt="TikTok"
-									priority={true}
-									className="h-[38px] w-auto"
-								/>
-								<div className="flex flex-col items-start gap-1">
-									<h5 className="text-sm text-white font-medium text-nowrap">
-										TIKTOK
-									</h5>
-									<p className="text-xs text-white font-light text-nowrap">
-										@wijayaputrabus
-									</p>
-								</div>
+					{/* <-- === TikTok Start === --> */}
+					<Link
+						href="https://www.tiktok.com/@wijayaputrabus"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="flex w-fit py-[10px] gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
+							<Image
+								src={tiktok}
+								alt="TikTok"
+								priority={true}
+								className="h-[38px] w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-[15px] text-white font-medium text-nowrap">
+									TIKTOK
+								</h5>
+								<p className="text-xs text-white font-light text-nowrap">
+									@wijayaputrabus
+								</p>
 							</div>
-						</Link>
-						{/* <-- === TikTok End === --> */}
+						</div>
+					</Link>
+					{/* <-- === TikTok End === --> */}
 
-						{/* <-- === Email Start === --> */}
-						<Link href="mailto:wp.trans@yahoo.com">
-							<div className="flex w-fit gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
-								<Image
-									src={email}
-									alt="Email"
-									priority={true}
-									className="h-[38px] w-auto"
-								/>
-								<div className="flex flex-col items-start gap-1">
-									<h5 className="text-sm text-white font-medium text-nowrap">
-										EMAIL
-									</h5>
-									<p className="text-xs text-white font-light text-nowrap">
-										wp.trans@yahoo.com
-									</p>
-								</div>
+					{/* <-- === Email Start === --> */}
+					<Link href="mailto:wp.trans@yahoo.com">
+						<div className="flex w-fit py-[10px] gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
+							<Image
+								src={email}
+								alt="Email"
+								priority={true}
+								className="h-[38px] w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-[15px] text-white font-medium text-nowrap">
+									EMAIL
+								</h5>
+								<p className="text-xs text-white font-light text-nowrap">
+									wp.trans@yahoo.com
+								</p>
 							</div>
-						</Link>
-						{/* <-- === Email End === --> */}
-					</div>
+						</div>
+					</Link>
+					{/* <-- === Email End === --> */}
 
+					{/* <-- === Divider Start === --> */}
 					<div className="block h-auto w-[1px] bg-white self-stretch"></div>
+					{/* <-- === Divider End === --> */}
 
-					<div className="flex w-auto items-center justify-center gap-[50px] 2xl:gap-12">
-						<div className="flex flex-col gap-1 items-start justify-center">
-							<h5 className="text-[13px] text-white font-medium text-nowrap">
-								POOL MALANG
-							</h5>
-							<p className="text-xs text-white font-light">
-								Jl. Raya Wendit Barat No.7,
-								<br />
-								Krajan, Kabupaten Malang
-							</p>
-						</div>
-
-						<div className="flex flex-col gap-1 items-start justify-center">
-							<h5 className="text-[13px] text-white font-medium text-nowrap">
-								POOL TANGERANG
-							</h5>
-							<p className="text-xs text-white font-light">
-								Jl. Raya Serang, Kragilan,
-								<br />
-								Kabupaten Serang, Banten
-							</p>
-						</div>
+					{/* <-- === Pool Malang Start === --> */}
+					<div className="flex flex-col gap-[6px] items-start justify-center">
+						<h5 className="text-[13px] text-white font-medium text-nowrap">
+							POOL MALANG
+						</h5>
+						<p className="text-xs text-white font-light">
+							Jl. Raya Wendit Barat No.7,
+							<br />
+							Krajan, Kabupaten Malang
+						</p>
 					</div>
+					{/* <-- === Pool Malang End === --> */}
+
+					{/* <-- === Pool Tangerang Start === --> */}
+					<div className="flex flex-col gap-[6px] items-start justify-center">
+						<h5 className="text-[13px] text-white font-medium text-nowrap">
+							POOL TANGERANG
+						</h5>
+						<p className="text-xs text-white font-light">
+							Jl. Raya Serang, Kragilan,
+							<br />
+							Kabupaten Serang, Banten
+						</p>
+					</div>
+					{/* <-- === Pool Tangerang End === --> */}
 				</div>
 			</footer>
 			{/* <-- ==== Footer Desktop End ==== --> */}

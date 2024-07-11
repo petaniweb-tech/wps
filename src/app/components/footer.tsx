@@ -78,10 +78,6 @@ export default function Footer() {
 					</div>
 
 					<div className="flex flex-col w-full items-start mt-11 gap-8">
-						<h3 className="text-xl text-white font-semibold">
-							LOCATION
-						</h3>
-
 						<div className="flex flex-col gap-7">
 							<div className="flex flex-col gap-2">
 								<h5 className="text-lg text-white">
@@ -111,7 +107,7 @@ export default function Footer() {
 			{/* <-- ==== Footer Desktop Start ==== --> */}
 			<footer className="hidden lg:block w-full px-sectionpxlg 2xl:px-sectionpx2xl py-20 bg-primary">
 				<div className="flex w-full items-center justify-between">
-					<div className="flex w-fit items-center justify-center gap-11 2xl:gap-12 py-3">
+					<div className="flex w-fit items-center justify-center gap-[50px] 2xl:gap-12 py-3">
 						{/* <-- === WhatsApp Start === --> */}
 						<Link
 							href="https://wa.me/6282132514522"
@@ -186,13 +182,7 @@ export default function Footer() {
 
 					<div className="block h-auto w-[1px] bg-white self-stretch"></div>
 
-					<div className="flex w-auto items-center justify-center gap-11 2xl:gap-12">
-						<div className="w-fit whitespace-nowrap items-center justify-center">
-							<h5 className="text-base text-white font-medium text-nowrap">
-								LOCATION
-							</h5>
-						</div>
-
+					<div className="flex w-auto items-center justify-center gap-[50px] 2xl:gap-12">
 						<div className="flex flex-col gap-1 items-start justify-center">
 							<h5 className="text-[13px] text-white font-medium text-nowrap">
 								POOL MALANG

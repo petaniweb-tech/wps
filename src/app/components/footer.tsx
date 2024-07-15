@@ -5,8 +5,9 @@ import Image from "next/image";
 import whitelogo from "../../../assets/images/img-white-logo.webp";
 import whatsapp from "../../../assets/icons/icon-whatsapp.png";
 import tiktok from "../../../assets/icons/icon-tiktok.png";
-import instagram from "../../../assets/icons/icon-instagram.png";
 import email from "../../../assets/icons/icon-email.png";
+import bus from "../../../assets/icons/icon-bus.png";
+import truck from "../../../assets/icons/icon-truck.png";
 
 export default function Footer() {
 	return (
@@ -24,41 +25,45 @@ export default function Footer() {
 					</div>
 
 					<div className="flex flex-col w-full items-start gap-6 mt-11">
-						{/* <-- === WhatsApp Start === --> */}
-						<Link href="https://wa.me/6282132514522">
-							<div className="flex items-center justify-center gap-4">
-								<Image
-									src={whatsapp}
-									alt="WhatsApp"
-									priority={true}
-									className="h-6 w-auto"
-								/>
-								<p className="text-[19px] leading-none text-white font-extralight">
-									0821 3251 4522
-								</p>
-							</div>
-						</Link>
-						{/* <-- === WhatsApp End === --> */}
-
-						{/* <-- === TikTok Start === --> */}
+						{/* <-- === Bus Reservation Start === --> */}
 						<Link
-							href="https://www.tiktok.com/@wijayaputrabus"
+							href="https://linktr.ee/powijayaputra?utm_source=linktree_profile_share&ltsid=07ae7352-71ba-4aac-b2fd-f0ecb6f2d6f3"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<div className="flex items-center justify-center gap-4">
 								<Image
-									src={tiktok}
-									alt="TikTok"
+									src={bus}
+									alt="Bus Reservation"
 									priority={true}
-									className="h-6 w-auto"
+									className="h-7 w-auto"
 								/>
-								<p className="text-[19px] leading-none text-white font-extralight">
-									@wijayaputrabus
+								<p className="text-base leading-none text-white font-extralight">
+									PO WIJAYA PUTRA (Bus Reservation)
 								</p>
 							</div>
 						</Link>
-						{/* <-- === TikTok End === --> */}
+						{/* <-- === Bus Reservation End === --> */}
+
+						{/* <-- === Truck Reservation Start === --> */}
+						<Link
+							href="https://wa.me/6282132514522"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<div className="flex items-center justify-center gap-4">
+								<Image
+									src={truck}
+									alt="Truck Icon"
+									priority={true}
+									className="h-7 w-auto"
+								/>
+								<p className="text-base leading-none text-white font-extralight">
+									0821 3251 4522 (Truck Reservation)
+								</p>
+							</div>
+						</Link>
+						{/* <-- === Truck Reservation End === --> */}
 
 						{/* <-- === Email Start === --> */}
 						<Link href="mailto:wp.trans@yahoo.com">
@@ -69,7 +74,7 @@ export default function Footer() {
 									priority={true}
 									className="h-6 w-auto"
 								/>
-								<p className="text-[19px] leading-none text-white font-extralight">
+								<p className="text-base leading-none text-white font-extralight">
 									wp.trans@yahoo.com
 								</p>
 							</div>
@@ -80,7 +85,7 @@ export default function Footer() {
 					<div className="flex flex-col w-full items-start mt-11 gap-8">
 						<div className="flex flex-col gap-7">
 							<div className="flex flex-col gap-2">
-								<h5 className="text-lg text-white">
+								<h5 className="text-[17px] text-white">
 									POOL MALANG
 								</h5>
 								<p className="text-[15px] text-white text-wrap leading-[1.6]">
@@ -90,7 +95,7 @@ export default function Footer() {
 							</div>
 
 							<div className="flex flex-col gap-2">
-								<h5 className="text-lg text-white">
+								<h5 className="text-[17px] text-white">
 									POOL TANGERANG
 								</h5>
 								<p className="text-[15px] text-white text-wrap leading-[1.6]">
@@ -107,7 +112,32 @@ export default function Footer() {
 			{/* <-- ==== Footer Desktop Start ==== --> */}
 			<footer className="hidden lg:block w-full px-sectionpxlg 2xl:px-sectionpx2xl py-20 bg-primary">
 				<div className="flex w-full items-center justify-between">
-					{/* <-- === WhatsApp Start === --> */}
+					{/* <-- === Bus Reservation Start === --> */}
+					<Link
+						href="https://linktr.ee/powijayaputra?utm_source=linktree_profile_share&ltsid=07ae7352-71ba-4aac-b2fd-f0ecb6f2d6f3"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div className="flex w-fit py-[10px] gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
+							<Image
+								src={bus}
+								alt="Bus Icon"
+								priority={true}
+								className="h-9 w-auto"
+							/>
+							<div className="flex flex-col items-start gap-1">
+								<h5 className="text-[15px] text-white font-medium text-nowrap">
+									BUS RESERVATION
+								</h5>
+								<p className="text-xs text-white font-light text-nowrap">
+									PO WIJAYA PUTRA
+								</p>
+							</div>
+						</div>
+					</Link>
+					{/* <-- === Bus Reservation End === --> */}
+
+					{/* <-- === Truck Reservation Start === --> */}
 					<Link
 						href="https://wa.me/6282132514522"
 						target="_blank"
@@ -115,14 +145,14 @@ export default function Footer() {
 					>
 						<div className="flex w-fit py-[10px] gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
 							<Image
-								src={whatsapp}
-								alt="WhatsApp"
+								src={truck}
+								alt="Truck Icon"
 								priority={true}
-								className="h-[38px] w-auto"
+								className="h-11 w-auto"
 							/>
 							<div className="flex flex-col items-start gap-1">
 								<h5 className="text-[15px] text-white font-medium text-nowrap">
-									WHATSAPP
+									TRUCK RESERVATION
 								</h5>
 								<p className="text-xs text-white font-light text-nowrap">
 									0821 3251 4522
@@ -130,32 +160,7 @@ export default function Footer() {
 							</div>
 						</div>
 					</Link>
-					{/* <-- === WhatsApp End === --> */}
-
-					{/* <-- === TikTok Start === --> */}
-					<Link
-						href="https://www.tiktok.com/@wijayaputrabus"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<div className="flex w-fit py-[10px] gap-4 items-center justify-center cursor-pointer whitespace-nowrap">
-							<Image
-								src={tiktok}
-								alt="TikTok"
-								priority={true}
-								className="h-[38px] w-auto"
-							/>
-							<div className="flex flex-col items-start gap-1">
-								<h5 className="text-[15px] text-white font-medium text-nowrap">
-									TIKTOK
-								</h5>
-								<p className="text-xs text-white font-light text-nowrap">
-									@wijayaputrabus
-								</p>
-							</div>
-						</div>
-					</Link>
-					{/* <-- === TikTok End === --> */}
+					{/* <-- === Truck Reservation End === --> */}
 
 					{/* <-- === Email Start === --> */}
 					<Link href="mailto:wp.trans@yahoo.com">
@@ -164,7 +169,7 @@ export default function Footer() {
 								src={email}
 								alt="Email"
 								priority={true}
-								className="h-[38px] w-auto"
+								className="h-9 w-auto"
 							/>
 							<div className="flex flex-col items-start gap-1">
 								<h5 className="text-[15px] text-white font-medium text-nowrap">

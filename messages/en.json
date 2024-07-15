@@ -76,5 +76,10 @@
 
 	"ContactPage": {
 		"headline": "CONTACT US"
+	},
+
+	"Footer": {
+		"busreservation": "Bus Reservation",
+		"truckreservation": "Truck Reservation"
 	}
 }

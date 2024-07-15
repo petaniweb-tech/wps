@@ -76,5 +76,10 @@
 
 	"ContactPage": {
 		"headline": "HUBUNGI KAMI"
+	},
+
+	"Footer": {
+		"busreservation": "Reservasi Bus",
+		"truckreservation": "Reservasi Truk"
 	}
 }

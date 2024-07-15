@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 // Import Assets //
 import whitelogo from "../../../assets/images/img-white-logo.webp";
-import whatsapp from "../../../assets/icons/icon-whatsapp.png";
-import tiktok from "../../../assets/icons/icon-tiktok.png";
 import email from "../../../assets/icons/icon-email.png";
 import bus from "../../../assets/icons/icon-bus.png";
 import truck from "../../../assets/icons/icon-truck.png";
 
 export default function Footer() {
+	const trFooter = useTranslations("Footer");
+
 	return (
 		<>
 			{/* <-- ==== Footer Mobile Start ==== --> */}
@@ -31,16 +32,21 @@ export default function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<div className="flex items-center justify-center gap-4">
+							<div className="flex items-center justify-center gap-5">
 								<Image
 									src={bus}
 									alt="Bus Reservation"
 									priority={true}
-									className="h-7 w-auto"
+									className="h-8 w-auto"
 								/>
-								<p className="text-base leading-none text-white font-extralight">
-									PO WIJAYA PUTRA (Bus Reservation)
-								</p>
+								<div className="flex flex-col items-start gap-[10px]">
+									<p className="text-[17px] leading-none text-white font-extralight">
+										PO WIJAYA PUTRA
+									</p>
+									<p className="text-sm leading-none text-white font-extralight">
+										({trFooter("busreservation")})
+									</p>
+								</div>
 							</div>
 						</Link>
 						{/* <-- === Bus Reservation End === --> */}
@@ -51,30 +57,35 @@ export default function Footer() {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<div className="flex items-center justify-center gap-4">
+							<div className="flex items-center justify-center gap-5">
 								<Image
 									src={truck}
 									alt="Truck Icon"
 									priority={true}
-									className="h-7 w-auto"
+									className="h-8 w-auto"
 								/>
-								<p className="text-base leading-none text-white font-extralight">
-									0821 3251 4522 (Truck Reservation)
-								</p>
+								<div className="flex flex-col items-start gap-[10px]">
+									<p className="text-[17px] leading-none text-white font-extralight">
+										0821 3251 4522
+									</p>
+									<p className="text-sm leading-none text-white font-extralight">
+										({trFooter("truckreservation")})
+									</p>
+								</div>
 							</div>
 						</Link>
 						{/* <-- === Truck Reservation End === --> */}
 
 						{/* <-- === Email Start === --> */}
 						<Link href="mailto:wp.trans@yahoo.com">
-							<div className="flex items-center justify-center gap-4">
+							<div className="flex items-center justify-center gap-5">
 								<Image
 									src={email}
 									alt="Email"
 									priority={true}
-									className="h-6 w-auto"
+									className="h-7 w-auto"
 								/>
-								<p className="text-base leading-none text-white font-extralight">
+								<p className="text-[17px] leading-none text-white font-extralight">
 									wp.trans@yahoo.com
 								</p>
 							</div>
@@ -126,8 +137,8 @@ export default function Footer() {
 								className="h-9 w-auto"
 							/>
 							<div className="flex flex-col items-start gap-1">
-								<h5 className="text-[15px] text-white font-medium text-nowrap">
-									BUS RESERVATION
+								<h5 className="text-[15px] text-white font-medium text-nowrap uppercase">
+									{trFooter("busreservation")}
 								</h5>
 								<p className="text-xs text-white font-light text-nowrap">
 									PO WIJAYA PUTRA
@@ -151,8 +162,8 @@ export default function Footer() {
 								className="h-11 w-auto"
 							/>
 							<div className="flex flex-col items-start gap-1">
-								<h5 className="text-[15px] text-white font-medium text-nowrap">
-									TRUCK RESERVATION
+								<h5 className="text-[15px] text-white font-medium text-nowrap uppercase">
+									{trFooter("truckreservation")}
 								</h5>
 								<p className="text-xs text-white font-light text-nowrap">
 									0821 3251 4522

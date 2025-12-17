@@ -66,7 +66,7 @@ export default function Footer() {
 								/>
 								<div className="flex flex-col items-start gap-[10px]">
 									<p className="text-[17px] leading-none text-white font-extralight">
-										0821 3251 4522
+										0813 3002 6001
 									</p>
 									<p className="text-sm leading-none text-white font-extralight">
 										({trFooter("truckreservation")})
@@ -166,7 +166,7 @@ export default function Footer() {
 									{trFooter("truckreservation")}
 								</h5>
 								<p className="text-xs text-white font-light text-nowrap">
-									0821 3251 4522
+									0813 3002 6001
 								</p>
 							</div>
 						</div>

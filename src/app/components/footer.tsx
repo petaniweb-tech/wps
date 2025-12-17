@@ -53,7 +53,7 @@ export default function Footer() {
 
 						{/* <-- === Truck Reservation Start === --> */}
 						<Link
-							href="https://wa.me/6282132514522"
+							href="https://wa.me/6281330026001"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -150,7 +150,7 @@ export default function Footer() {
 
 					{/* <-- === Truck Reservation Start === --> */}
 					<Link
-						href="https://wa.me/6282132514522"
+						href="https://wa.me/6281330026001"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
